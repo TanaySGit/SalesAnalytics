@@ -988,3 +988,249 @@ snowflake.connector.network.RetryRequest: could not find io module state (interp
 2018-09-24 20:50:07,250 closed
 2018-09-24 20:50:07,458 closed
 2018-09-24 20:50:07,770 closed
+2018-09-25 11:24:46,908 Funnel data loading process started
+2018-09-25 11:24:46,908 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-25 11:24:46,924 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-25 11:24:49,145 query: [SELECT NVL(MAX(BATCH_NUM),0) FROM RUN_TABLE;]
+2018-09-25 11:24:50,054 query execution done
+2018-09-25 11:24:50,101 The batch number for this load is 3
+2018-09-25 11:24:50,101 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-25 11:24:50,666 query execution done
+2018-09-25 11:24:50,666 query: [select nvl(PROCESSED_FLAG,'N') from BASE_TABLES_RFRESH_CAPTURE;]
+2018-09-25 11:24:51,027 query execution done
+2018-09-25 11:24:51,027 Daily load tables data processing started
+2018-09-25 11:24:51,027 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-25 11:24:51,043 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-25 11:24:51,434 query: [INSERT INTO RUN_TABLE(BATCH_NUM,PROCESS,START_TIME,END_TIME,TIME_TAKEN_IN_MINT,S...]
+2018-09-25 11:24:54,139 query execution done
+2018-09-25 11:24:54,139 query: [select nvl(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP =CURRENT_DATE;]
+2018-09-25 11:24:54,436 query execution done
+2018-09-25 11:24:54,436 The workday for today is: ('WD16',)
+2018-09-25 11:24:54,436 Today is a regular day(not a working day). Program will try to load below tables
+2018-09-25 11:24:54,436 ['ALL_OPPORTUNITIES', 'OPPORTUNITY_SNAPSHOT_DAILY', 'OPPTY_SNAPSHOT_ASIS', 'OPPORTUNITYSPLIT_SNAPSHOT']
+2018-09-25 11:26:43,056 query: [select * from SALESFORCE_KT_PROD.ALL_OPPORTUNITIES where PERIOD_NAME='SEP-2018' ...]
+2018-09-25 11:26:43,545 query execution done
+2018-09-25 11:27:05,318 Truncating the table ALL_OPPORTUNITIES as the tuncate option is set to yes for the table
+2018-09-25 11:27:08,248 query: [TRUNCATE TABLE  ALL_OPPORTUNITIES]
+2018-09-25 11:27:08,999 query execution done
+2018-09-25 11:34:55,079 Funnel data loading process started
+2018-09-25 11:34:55,079 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-25 11:34:55,094 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-25 11:34:56,017 query: [SELECT NVL(MAX(BATCH_NUM),0) FROM RUN_TABLE;]
+2018-09-25 11:34:56,846 query execution done
+2018-09-25 11:34:56,846 The batch number for this load is 4
+2018-09-25 11:34:56,846 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-25 11:34:57,784 query execution done
+2018-09-25 11:34:57,784 query: [select nvl(PROCESSED_FLAG,'N') from BASE_TABLES_RFRESH_CAPTURE;]
+2018-09-25 11:34:58,222 query execution done
+2018-09-25 11:34:58,222 Daily load tables data processing started
+2018-09-25 11:34:58,222 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-25 11:34:58,238 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-25 11:34:58,613 query: [INSERT INTO RUN_TABLE(BATCH_NUM,PROCESS,START_TIME,END_TIME,TIME_TAKEN_IN_MINT,S...]
+2018-09-25 11:34:59,657 query execution done
+2018-09-25 11:34:59,657 query: [select nvl(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP =CURRENT_DATE;]
+2018-09-25 11:35:00,314 query execution done
+2018-09-25 11:35:00,314 The workday for today is: ('WD16',)
+2018-09-25 11:35:00,314 Today is a regular day(not a working day). Program will try to load below tables
+2018-09-25 11:35:00,314 ['ALL_OPPORTUNITIES', 'OPPORTUNITY_SNAPSHOT_DAILY', 'OPPTY_SNAPSHOT_ASIS', 'OPPORTUNITYSPLIT_SNAPSHOT']
+2018-09-25 11:35:00,314 query: [select * from SALESFORCE_KT_PROD.ALL_OPPORTUNITIES where PERIOD_NAME='SEP-2018' ...]
+2018-09-25 11:35:00,659 query execution done
+2018-09-25 11:35:00,659 Truncating the table ALL_OPPORTUNITIES as the tuncate option is set to yes for the table
+2018-09-25 11:35:00,659 query: [TRUNCATE TABLE  ALL_OPPORTUNITIES]
+2018-09-25 11:35:01,676 query execution done
+2018-09-25 11:35:01,676 Loading table ALL_OPPORTUNITIES
+2018-09-25 11:35:01,676 query: [insert into ALL_OPPORTUNITIES (OPPTY_ID,OPPTY_NUMBER, OPPTY_NAME,Close_Date,CREA...]
+2018-09-25 11:35:23,538 query execution done
+2018-09-25 11:35:23,538 query: [insert into RUN_TABLE_DETAILS(BATCH,TASK_PHASE,STATUS,TABLE_NAME,PROCESS_COUNT,E...]
+2018-09-25 11:35:24,527 query execution done
+2018-09-25 11:35:24,527 Loading completed for table ALL_OPPORTUNITIES. Took 0.36 min and loaded # of rows 200733
+2018-09-25 11:35:24,527 query: [select * from SALESFORCE_KT_PROD.ALL_OPPORTUNITIES where PERIOD_NAME='SEP-2018' ...]
+2018-09-25 11:35:28,237 query execution done
+2018-09-25 11:35:28,252 query: [select * from SALESFORCE_KT_PROD.OPPORTUNITY_SNAPSHOT_DAILY where PERIOD_NAME='S...]
+2018-09-25 11:35:28,612 query execution done
+2018-09-25 11:35:28,612 Loading table OPPORTUNITY_SNAPSHOT_DAILY
+2018-09-25 11:35:28,612 query: [insert into  SALESFORCE_KT_PROD.opportunity_snapshot_daily(  Oppty_Id, Oppty_Num...]
+2018-09-25 11:35:38,055 query execution done
+2018-09-25 11:35:38,055 query: [insert into RUN_TABLE_DETAILS(BATCH,TASK_PHASE,STATUS,TABLE_NAME,PROCESS_COUNT,E...]
+2018-09-25 11:35:39,080 query execution done
+2018-09-25 11:35:39,080 Loading completed for table OPPORTUNITY_SNAPSHOT_DAILY. Took 0.16 min and loaded # of rows 200733
+2018-09-25 11:35:39,080 query: [select * from SALESFORCE_KT_PROD.OPPORTUNITY_SNAPSHOT_DAILY where PERIOD_NAME='S...]
+2018-09-25 11:35:44,693 query execution done
+2018-09-25 11:35:44,693 query: [select * from SALESFORCE_KT_PROD.OPPTY_SNAPSHOT_ASIS where PERIOD_NAME='SEP-2018...]
+2018-09-25 11:35:45,459 query execution done
+2018-09-25 11:35:45,459 Loading table OPPTY_SNAPSHOT_ASIS
+2018-09-25 11:35:45,459 query: [insert into Oppty_Snapshot_asis (ID, ISDELETED, ACCNTID, RECORDTYPEID, ISPRIVATE...]
+2018-09-25 11:35:58,539 query execution done
+2018-09-25 11:35:58,539 query: [insert into RUN_TABLE_DETAILS(BATCH,TASK_PHASE,STATUS,TABLE_NAME,PROCESS_COUNT,E...]
+2018-09-25 11:35:59,435 query execution done
+2018-09-25 11:35:59,435 Loading completed for table OPPTY_SNAPSHOT_ASIS. Took 0.22 min and loaded # of rows 178605
+2018-09-25 11:35:59,435 query: [select * from SALESFORCE_KT_PROD.OPPTY_SNAPSHOT_ASIS where PERIOD_NAME='SEP-2018...]
+2018-09-25 11:36:06,024 query execution done
+2018-09-25 11:36:06,040 query: [select * from SALESFORCE_KT_PROD.OPPORTUNITYSPLIT_SNAPSHOT where PERIOD_NAME='SE...]
+2018-09-25 11:36:06,744 query execution done
+2018-09-25 11:36:06,744 The table OPPORTUNITYSPLIT_SNAPSHOT already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-25 11:36:06,744 Loading table OPPORTUNITYSPLIT_SNAPSHOT
+2018-09-25 11:36:06,744 query: [INSERT INTO OPPORTUNITYSPLIT_SNAPSHOT( ID	, ISDELETED	, SPLIT	, CREATEDDATE	, CR...]
+2018-09-25 11:36:10,044 query execution done
+2018-09-25 11:36:10,044 query: [insert into RUN_TABLE_DETAILS(BATCH,TASK_PHASE,STATUS,TABLE_NAME,PROCESS_COUNT,E...]
+2018-09-25 11:36:11,103 query execution done
+2018-09-25 11:36:11,103 Loading completed for table OPPORTUNITYSPLIT_SNAPSHOT. Took 0.05 min and loaded # of rows 200579
+2018-09-25 11:36:11,103 query: [select * from SALESFORCE_KT_PROD.OPPORTUNITYSPLIT_SNAPSHOT where PERIOD_NAME='SE...]
+2018-09-25 11:36:13,342 query execution done
+2018-09-25 11:36:13,342 query: [UPDATE  RUN_TABLE SET END_TIME=CURRENT_TIMESTAMP , TIME_TAKEN_IN_MINT= datediff(...]
+2018-09-25 11:36:15,044 query execution done
+2018-09-25 11:36:15,044 Daily load tables data Processing completed. Closing the snowflake connection
+2018-09-25 11:36:15,044 Total time taken for the load in minute: 1.28
+2018-09-25 11:36:15,044 Closing Connection. Exit form Sales Analytcs Load
+2018-09-25 11:36:15,075 closed
+2018-09-25 11:36:15,309 closed
+2018-09-25 11:48:09,144 Funnel data loading process started
+2018-09-25 11:48:09,144 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-25 11:48:09,144 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-25 11:48:09,942 query: [SELECT NVL(MAX(BATCH_NUM),0) FROM RUN_TABLE;]
+2018-09-25 11:48:11,052 query execution done
+2018-09-25 11:48:11,052 The batch number for this load is 1
+2018-09-25 11:48:11,052 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-25 11:48:11,396 query execution done
+2018-09-25 11:48:11,396 query: [select nvl(PROCESSED_FLAG,'N') from BASE_TABLES_RFRESH_CAPTURE;]
+2018-09-25 11:48:11,756 query execution done
+2018-09-25 11:48:11,756 Daily load tables data processing started
+2018-09-25 11:48:11,756 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-25 11:48:11,756 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-25 11:48:12,366 query: [INSERT INTO RUN_TABLE(BATCH_NUM,PROCESS,START_TIME,END_TIME,TIME_TAKEN_IN_MINT,S...]
+2018-09-25 11:48:12,929 query execution done
+2018-09-25 11:48:12,929 query: [select nvl(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP =CURRENT_DATE;]
+2018-09-25 11:48:13,415 query execution done
+2018-09-25 11:48:13,415 The workday for today is: ('WD16',)
+2018-09-25 11:48:13,415 Today is a regular day(not a working day). Program will try to load below tables
+2018-09-25 11:48:13,431 ['ALL_OPPORTUNITIES', 'OPPORTUNITY_SNAPSHOT_DAILY', 'OPPTY_SNAPSHOT_ASIS', 'OPPORTUNITYSPLIT_SNAPSHOT']
+2018-09-25 11:48:13,431 query: [select * from SALESFORCE_KT_PROD.ALL_OPPORTUNITIES where PERIOD_NAME='SEP-2018' ...]
+2018-09-25 11:48:19,300 query execution done
+2018-09-25 11:48:19,300 The table ALL_OPPORTUNITIES already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-25 11:48:19,300 Loading table ALL_OPPORTUNITIES
+2018-09-25 11:48:19,300 query: [insert into ALL_OPPORTUNITIES (OPPTY_ID,OPPTY_NUMBER, OPPTY_NAME,Close_Date,CREA...]
+2018-09-25 11:48:29,091 query execution done
+2018-09-25 11:48:29,107 query: [insert into RUN_TABLE_DETAILS(BATCH,TASK_PHASE,STATUS,TABLE_NAME,PROCESS_COUNT,E...]
+2018-09-25 11:48:30,295 query execution done
+2018-09-25 11:48:30,295 Loading completed for table ALL_OPPORTUNITIES. Took 0.16 min and loaded # of rows 200733
+2018-09-25 11:48:30,295 query: [select * from SALESFORCE_KT_PROD.OPPORTUNITY_SNAPSHOT_DAILY where PERIOD_NAME='S...]
+2018-09-25 11:48:30,936 query execution done
+2018-09-25 11:48:30,936 The table OPPORTUNITY_SNAPSHOT_DAILY already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-25 11:48:30,936 Loading table OPPORTUNITY_SNAPSHOT_DAILY
+2018-09-25 11:48:30,936 query: [insert into  SALESFORCE_KT_PROD.opportunity_snapshot_daily(  Oppty_Id, Oppty_Num...]
+2018-09-25 11:48:39,287 query execution done
+2018-09-25 11:48:39,287 query: [insert into RUN_TABLE_DETAILS(BATCH,TASK_PHASE,STATUS,TABLE_NAME,PROCESS_COUNT,E...]
+2018-09-25 11:48:40,147 query execution done
+2018-09-25 11:48:40,147 Loading completed for table OPPORTUNITY_SNAPSHOT_DAILY. Took 0.14 min and loaded # of rows 200733
+2018-09-25 11:48:40,147 query: [select * from SALESFORCE_KT_PROD.OPPTY_SNAPSHOT_ASIS where PERIOD_NAME='SEP-2018...]
+2018-09-25 11:48:40,945 query execution done
+2018-09-25 11:48:40,961 The table OPPTY_SNAPSHOT_ASIS already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-25 11:48:40,961 Loading table OPPTY_SNAPSHOT_ASIS
+2018-09-25 11:48:40,961 query: [insert into Oppty_Snapshot_asis (ID, ISDELETED, ACCNTID, RECORDTYPEID, ISPRIVATE...]
+2018-09-25 11:48:46,644 query execution done
+2018-09-25 11:48:46,644 query: [insert into RUN_TABLE_DETAILS(BATCH,TASK_PHASE,STATUS,TABLE_NAME,PROCESS_COUNT,E...]
+2018-09-25 11:48:48,365 query execution done
+2018-09-25 11:48:48,365 Loading completed for table OPPTY_SNAPSHOT_ASIS. Took 0.09 min and loaded # of rows 178605
+2018-09-25 11:48:48,365 query: [select * from SALESFORCE_KT_PROD.OPPORTUNITYSPLIT_SNAPSHOT where PERIOD_NAME='SE...]
+2018-09-25 11:48:50,134 query execution done
+2018-09-25 11:48:50,134 The table OPPORTUNITYSPLIT_SNAPSHOT already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-25 11:48:50,134 Loading table OPPORTUNITYSPLIT_SNAPSHOT
+2018-09-25 11:48:50,134 query: [INSERT INTO OPPORTUNITYSPLIT_SNAPSHOT( ID	, ISDELETED	, SPLIT	, CREATEDDATE	, CR...]
+2018-09-25 11:48:53,530 query execution done
+2018-09-25 11:48:53,530 query: [insert into RUN_TABLE_DETAILS(BATCH,TASK_PHASE,STATUS,TABLE_NAME,PROCESS_COUNT,E...]
+2018-09-25 11:48:54,361 query execution done
+2018-09-25 11:48:54,361 Loading completed for table OPPORTUNITYSPLIT_SNAPSHOT. Took 0.06 min and loaded # of rows 200579
+2018-09-25 11:48:54,361 query: [UPDATE  RUN_TABLE SET END_TIME=CURRENT_TIMESTAMP , TIME_TAKEN_IN_MINT= datediff(...]
+2018-09-25 11:48:55,708 query execution done
+2018-09-25 11:48:55,708 Daily load tables data Processing completed. Closing the snowflake connection
+2018-09-25 11:48:55,708 Total time taken for the load in minute: 0.73
+2018-09-25 11:48:55,708 Closing Connection. Exit form Sales Analytcs Load
+2018-09-25 11:48:55,739 closed
+2018-09-25 11:48:55,927 closed
+2018-09-25 12:01:49,499 Funnel data loading process started
+2018-09-25 12:01:49,499 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-25 12:01:49,514 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-25 12:01:50,013 Starting new HTTP connection (1): ocsp.snowflakecomputing.com
+2018-09-25 12:01:50,925 query: [SELECT NVL(MAX(BATCH_NUM),0) FROM RUN_TABLE;]
+2018-09-25 12:01:51,903 query execution done
+2018-09-25 12:01:51,919 The batch number for this load is 2
+2018-09-25 12:01:51,919 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-25 12:01:52,367 query execution done
+2018-09-25 12:01:52,367 query: [select nvl(PROCESSED_FLAG,'N') from BASE_TABLES_RFRESH_CAPTURE;]
+2018-09-25 12:01:52,552 query execution done
+2018-09-25 12:01:52,552 Daily load tables data processing started
+2018-09-25 12:01:52,552 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-25 12:01:52,552 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-25 12:01:52,892 query: [INSERT INTO RUN_TABLE(BATCH_NUM,PROCESS,START_TIME,END_TIME,TIME_TAKEN_IN_MINT,S...]
+2018-09-25 12:01:54,593 query execution done
+2018-09-25 12:01:54,593 query: [select nvl(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP =CURRENT_DATE;]
+2018-09-25 12:01:55,444 query execution done
+2018-09-25 12:01:55,444 The workday for today is: ('WD16',)
+2018-09-25 12:01:55,444 Today is a regular day(not a working day). Program will try to load below tables
+2018-09-25 12:01:55,444 ['ALL_OPPORTUNITIES', 'OPPORTUNITY_SNAPSHOT_DAILY', 'OPPTY_SNAPSHOT_ASIS', 'OPPORTUNITYSPLIT_SNAPSHOT']
+2018-09-25 12:01:55,444 query: [select * from SALESFORCE_KT_PROD.ALL_OPPORTUNITIES where PERIOD_NAME='SEP-2018' ...]
+2018-09-25 12:01:59,526 query execution done
+2018-09-25 12:01:59,526 The table ALL_OPPORTUNITIES already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-25 12:01:59,526 query: [select * from SALESFORCE_KT_PROD.OPPORTUNITY_SNAPSHOT_DAILY where PERIOD_NAME='S...]
+2018-09-25 12:02:03,267 query execution done
+2018-09-25 12:02:03,267 The table OPPORTUNITY_SNAPSHOT_DAILY already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-25 12:02:03,267 query: [select * from SALESFORCE_KT_PROD.OPPTY_SNAPSHOT_ASIS where PERIOD_NAME='SEP-2018...]
+2018-09-25 12:02:12,493 query execution done
+2018-09-25 12:02:12,493 The table OPPTY_SNAPSHOT_ASIS already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-25 12:02:12,493 query: [select * from SALESFORCE_KT_PROD.OPPORTUNITYSPLIT_SNAPSHOT where PERIOD_NAME='SE...]
+2018-09-25 12:02:15,989 query execution done
+2018-09-25 12:02:15,989 The table OPPORTUNITYSPLIT_SNAPSHOT already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-25 12:02:15,989 query: [UPDATE  RUN_TABLE SET END_TIME=CURRENT_TIMESTAMP , TIME_TAKEN_IN_MINT= datediff(...]
+2018-09-25 12:02:17,519 query execution done
+2018-09-25 12:02:17,519 Daily load tables data Processing completed. Closing the snowflake connection
+2018-09-25 12:02:17,519 Total time taken for the load in minute: 0.42
+2018-09-25 12:02:17,519 Closing Connection. Exit form Sales Analytcs Load
+2018-09-25 12:02:17,550 closed
+2018-09-25 12:02:17,751 closed
+2018-09-25 12:02:46,312 Funnel data loading process started
+2018-09-25 12:02:46,312 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-25 12:02:46,312 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-25 12:02:47,777 query: [SELECT NVL(MAX(BATCH_NUM),0) FROM RUN_TABLE;]
+2018-09-25 12:02:48,773 query execution done
+2018-09-25 12:02:48,788 The batch number for this load is 3
+2018-09-25 12:02:48,788 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-25 12:02:48,944 query execution done
+2018-09-25 12:02:48,944 query: [select nvl(PROCESSED_FLAG,'N') from BASE_TABLES_RFRESH_CAPTURE;]
+2018-09-25 12:02:49,209 query execution done
+2018-09-25 12:02:49,209 Daily load tables data processing started
+2018-09-25 12:02:49,209 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-25 12:02:49,224 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-25 12:02:49,609 query: [INSERT INTO RUN_TABLE(BATCH_NUM,PROCESS,START_TIME,END_TIME,TIME_TAKEN_IN_MINT,S...]
+2018-09-25 12:02:50,839 query execution done
+2018-09-25 12:02:50,839 query: [select nvl(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP =CURRENT_DATE;]
+2018-09-25 12:02:51,197 query execution done
+2018-09-25 12:02:51,197 The workday for today is: ('WD16',)
+2018-09-25 12:02:51,197 Today is a regular day(not a working day). Program will try to load below tables
+2018-09-25 12:02:51,197 ['ALL_OPPORTUNITIES', 'OPPORTUNITY_SNAPSHOT_DAILY', 'OPPTY_SNAPSHOT_ASIS', 'OPPORTUNITYSPLIT_SNAPSHOT']
+2018-09-25 12:02:51,197 query: [select * from SALESFORCE_KT_PROD.ALL_OPPORTUNITIES where PERIOD_NAME='SEP-2018' ...]
+2018-09-25 12:02:51,477 query execution done
+2018-09-25 12:02:51,477 Truncating the table ALL_OPPORTUNITIES as the tuncate option is set to yes for the table
+2018-09-25 12:02:51,477 query: [TRUNCATE TABLE  ALL_OPPORTUNITIES]
+2018-09-25 12:02:52,333 query execution done
+2018-09-25 12:02:52,333 Loading table ALL_OPPORTUNITIES
+2018-09-25 12:02:52,333 query: [insert into ALL_OPPORTUNITIES (OPPTY_ID,OPPTY_NUMBER, OPPTY_NAME,Close_Date,CREA...]
+2018-09-25 12:03:07,635 query execution done
+2018-09-25 12:03:07,635 query: [insert into RUN_TABLE_DETAILS(BATCH,TASK_PHASE,STATUS,TABLE_NAME,PROCESS_COUNT,E...]
+2018-09-25 12:03:09,036 query execution done
+2018-09-25 12:03:09,036 Loading completed for table ALL_OPPORTUNITIES. Took 0.26 min and loaded # of rows 200733
+2018-09-25 12:03:09,036 query: [select * from SALESFORCE_KT_PROD.OPPORTUNITY_SNAPSHOT_DAILY where PERIOD_NAME='S...]
+2018-09-25 12:03:09,160 query execution done
+2018-09-25 12:03:09,176 The table OPPORTUNITY_SNAPSHOT_DAILY already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-25 12:03:09,176 query: [select * from SALESFORCE_KT_PROD.OPPTY_SNAPSHOT_ASIS where PERIOD_NAME='SEP-2018...]
+2018-09-25 12:03:09,456 query execution done
+2018-09-25 12:03:09,456 The table OPPTY_SNAPSHOT_ASIS already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-25 12:03:09,456 query: [select * from SALESFORCE_KT_PROD.OPPORTUNITYSPLIT_SNAPSHOT where PERIOD_NAME='SE...]
+2018-09-25 12:03:10,125 query execution done
+2018-09-25 12:03:10,125 The table OPPORTUNITYSPLIT_SNAPSHOT already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-25 12:03:10,125 query: [UPDATE  RUN_TABLE SET END_TIME=CURRENT_TIMESTAMP , TIME_TAKEN_IN_MINT= datediff(...]
+2018-09-25 12:03:12,600 query execution done
+2018-09-25 12:03:12,600 Daily load tables data Processing completed. Closing the snowflake connection
+2018-09-25 12:03:12,600 Total time taken for the load in minute: 0.39
+2018-09-25 12:03:12,600 Closing Connection. Exit form Sales Analytcs Load
+2018-09-25 12:03:12,646 closed
+2018-09-25 12:03:12,896 closed

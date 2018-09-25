@@ -108,44 +108,44 @@ class loadfunnelailytables:
     loadseq2 = max(loadseqreg)
     for i in loadseqreg:
 
-     executestatement = [d for d in dailylist if int(d['Load_Seq']) == i ]
-     gettablename = executestatement[0].get("Load_Table")
-     truncateoption=executestatement[0].get("Is_Truncate")
-     executestatementstr = executestatement[0].get("Load_String")
-     executestatementstr = executestatementstr % (periodname, getwd[0])
+       executestatement = [d for d in dailylist if int(d['Load_Seq']) == i ]
+       gettablename = executestatement[0].get("Load_Table")
+       truncateoption=executestatement[0].get("Is_Truncate")
+       executestatementstr = executestatement[0].get("Load_String")
+       executestatementstr = executestatementstr % (periodname, getwd[0])
 
-     checkalreadyloaded = config.CHECK_IF_ALREADY_LOADED % (gettablename, periodname, getwd[0])
+       checkalreadyloaded = config.CHECK_IF_ALREADY_LOADED % (gettablename, periodname, getwd[0])
 
-     checkdataexist = snowcursor.execute(checkalreadyloaded)
-     checkdataexistressult = checkdataexist.rowcount
+       checkdataexist = snowcursor.execute(checkalreadyloaded)
+       checkdataexistressult = checkdataexist.rowcount
 
-     if checkdataexistressult == 1:
-      print("The table " + gettablename + ' already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.')
-      logging.info("The table " + gettablename + ' already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.')
-     else:
+       if checkdataexistressult == 1:
+          print("The table " + gettablename + ' already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.')
+          logging.info("The table " + gettablename + ' already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.')
+       else:
 
 
-      if truncateoption=='YES':
-       print("Truncating the table "+gettablename+ " as the tuncate option is set to yes for the table")
-       logging.info("Truncating the table "+gettablename+ " as the tuncate option is set to yes for the table")
-       snowcursor.execute("TRUNCATE TABLE  "+gettablename)
-    print("Loading table "+gettablename)
-    logging.info("Loading table "+gettablename)
-    timerstep4 = timer()
-    snowexec = snowcursor.execute(executestatementstr)
-    rowcount=snowexec.rowcount
-    timerstep5 = timer()
-    timedelta23 = round((timerstep5 - timerstep4) / 60, 2)
-    snowcursor.execute("insert into RUN_TABLE_DETAILS(BATCH,TASK_PHASE,STATUS,TABLE_NAME,PROCESS_COUNT,ELAPSED_TIME_IN_MIN,PROCESS_DATE) VALUES (" + str(self.batch) + ",'Daily_Snapshot_Load','Completed','" + gettablename + "','" + str(rowcount) + "','" + str(timedelta23) + "',CURRENT_TIMESTAMP);")
-    print("Loading completed for table " + gettablename+". Took "+str(timedelta23)+" min and loaded # of rows "+str(rowcount))
-    logging.info("Loading completed for table " + gettablename+". Took "+str(timedelta23)+" min and loaded # of rows "+str(rowcount))
+          if truncateoption=='YES':
+             print("Truncating the table "+gettablename+ " as the tuncate option is set to yes for the table")
+             logging.info("Truncating the table "+gettablename+ " as the tuncate option is set to yes for the table")
+             snowcursor.execute("TRUNCATE TABLE  "+gettablename)
+          print("Loading table "+gettablename)
+          logging.info("Loading table "+gettablename)
+          timerstep4 = timer()
+          snowexec = snowcursor.execute(executestatementstr)
+          rowcount=snowexec.rowcount
+          timerstep5 = timer()
+          timedelta23 = round((timerstep5 - timerstep4) / 60, 2)
+          snowcursor.execute("insert into RUN_TABLE_DETAILS(BATCH,TASK_PHASE,STATUS,TABLE_NAME,PROCESS_COUNT,ELAPSED_TIME_IN_MIN,PROCESS_DATE) VALUES (" + str(self.batch) + ",'Daily_Snapshot_Load','Completed','" + gettablename + "','" + str(rowcount) + "','" + str(timedelta23) + "',CURRENT_TIMESTAMP);")
+          print("Loading completed for table " + gettablename+". Took "+str(timedelta23)+" min and loaded # of rows "+str(rowcount))
+          logging.info("Loading completed for table " + gettablename+". Took "+str(timedelta23)+" min and loaded # of rows "+str(rowcount))
     updaterun="UPDATE  RUN_TABLE SET END_TIME=CURRENT_TIMESTAMP , TIME_TAKEN_IN_MINT= datediff(minute, START_TIME, CURRENT_TIMESTAMP) WHERE BATCH_NUM=%s" %(self.batch)
-    snowcursor.execute(checkalreadyloaded)
+
 
    updaterun="UPDATE  RUN_TABLE SET END_TIME=CURRENT_TIMESTAMP , TIME_TAKEN_IN_MINT= datediff(minute, START_TIME, CURRENT_TIMESTAMP),STATUS_CD='COMPLETED' WHERE BATCH_NUM=%s" %(self.batch)
    snowcursor.execute(updaterun)
 
-   snowcursor.close()
+
 
    print("Daily load tables data processing completed. Closing the snowflake connection")
    logging.info("Daily load tables data Processing completed. Closing the snowflake connection")
