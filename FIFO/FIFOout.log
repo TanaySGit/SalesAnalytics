@@ -1,0 +1,990 @@
+2018-09-24 14:22:29,644 Funnel data loading process started
+2018-09-24 14:22:29,644 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 14:22:29,660 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 14:22:30,535 query: [SELECT NVL(MAX(BATCH_NUM),0) FROM RUN_TABLE;]
+2018-09-24 14:22:31,019 query execution done
+2018-09-24 14:22:31,019 The batch number for this load is 50
+2018-09-24 14:22:31,019 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 14:22:32,064 query execution done
+2018-09-24 14:22:32,064 query: [select nvl(PROCESSED_FLAG,'N') from BASE_TABLES_RFRESH_CAPTURE;]
+2018-09-24 14:22:32,235 query execution done
+2018-09-24 14:22:32,235 Daily load tables data processing started
+2018-09-24 14:22:32,235 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 14:22:32,251 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 14:22:32,875 query: [INSERT INTO RUN_TABLE(BATCH_NUM,PROCESS_DESC,START_TIME,END_TIME,TIME_TAKEN_IN_M...]
+2018-09-24 14:22:33,939 query execution done
+2018-09-24 14:22:33,939 query: [select nvl(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP =CURRENT_DATE;]
+2018-09-24 14:22:34,188 query execution done
+2018-09-24 14:22:34,188 The workday for today is: ('WD15',)
+2018-09-24 14:22:34,188 Today is a workday. Program will try to load below tables
+2018-09-24 14:22:34,204 ['ALL_OPPORTUNITIES', 'OPPORTUNITY_SNAPSHOT', 'OPPORTUNITY_SNAPSHOT_DAILY', 'OPPTY_SNAPSHOT_ASIS', 'OPPORTUNITYSPLIT_SNAPSHOT']
+2018-09-24 14:22:34,204 query: [select * from SALESFORCE_KT_PROD.ALL_OPPORTUNITIES where PERIOD_NAME='SEP-2018' ...]
+2018-09-24 14:22:34,688 query execution done
+2018-09-24 14:22:34,688 The table ALL_OPPORTUNITIES already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 14:22:34,688 query: [select * from SALESFORCE_KT_PROD.OPPORTUNITY_SNAPSHOT where PERIOD_NAME='SEP-201...]
+2018-09-24 14:22:35,156 query execution done
+2018-09-24 14:22:35,156 The table OPPORTUNITY_SNAPSHOT already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 14:22:35,156 query: [select * from SALESFORCE_KT_PROD.OPPORTUNITY_SNAPSHOT_DAILY where PERIOD_NAME='S...]
+2018-09-24 14:22:35,686 query execution done
+2018-09-24 14:22:35,702 The table OPPORTUNITY_SNAPSHOT_DAILY already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 14:22:35,702 query: [select * from SALESFORCE_KT_PROD.OPPTY_SNAPSHOT_ASIS where PERIOD_NAME='SEP-2018...]
+2018-09-24 14:22:36,450 query execution done
+2018-09-24 14:22:36,450 The table OPPTY_SNAPSHOT_ASIS already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 14:22:36,450 query: [select * from SALESFORCE_KT_PROD.OPPORTUNITYSPLIT_SNAPSHOT where PERIOD_NAME='SE...]
+2018-09-24 14:22:37,121 query execution done
+2018-09-24 14:22:37,121 The table OPPORTUNITYSPLIT_SNAPSHOT already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 14:22:37,121 query: [UPDATE  RUN_TABLE SET END_TIME=CURRENT_TIMESTAMP , TIME_TAKEN_IN_MINT= datediff(...]
+2018-09-24 14:22:38,167 query execution done
+2018-09-24 14:22:38,167 Daily load tables data Processing completed. Closing the snowflake connection
+2018-09-24 14:22:38,167 Total time taken for the load in minute: 0.1
+2018-09-24 14:22:38,198 closed
+2018-09-24 14:22:38,341 closed
+2018-09-24 14:23:42,889 Funnel data loading process started
+2018-09-24 14:23:42,889 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 14:23:42,904 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 14:23:43,809 query: [SELECT NVL(MAX(BATCH_NUM),0) FROM RUN_TABLE;]
+2018-09-24 14:23:44,386 query execution done
+2018-09-24 14:23:44,386 The batch number for this load is 51
+2018-09-24 14:23:44,386 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 14:23:44,543 query execution done
+2018-09-24 14:23:44,543 query: [select nvl(PROCESSED_FLAG,'N') from BASE_TABLES_RFRESH_CAPTURE;]
+2018-09-24 14:23:44,908 query execution done
+2018-09-24 14:23:44,908 Daily load tables data processing started
+2018-09-24 14:23:44,908 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 14:23:44,924 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 14:23:45,532 query: [INSERT INTO RUN_TABLE(BATCH_NUM,PROCESS_DESC,START_TIME,END_TIME,TIME_TAKEN_IN_M...]
+2018-09-24 14:23:46,718 query execution done
+2018-09-24 14:23:46,718 query: [select nvl(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP =CURRENT_DATE;]
+2018-09-24 14:23:46,874 query execution done
+2018-09-24 14:23:46,874 The workday for today is: ('WD15',)
+2018-09-24 14:23:46,874 Today is a workday. Program will try to load below tables
+2018-09-24 14:23:46,874 ['ALL_OPPORTUNITIES', 'OPPORTUNITY_SNAPSHOT', 'OPPORTUNITY_SNAPSHOT_DAILY', 'OPPTY_SNAPSHOT_ASIS', 'OPPORTUNITYSPLIT_SNAPSHOT']
+2018-09-24 14:23:46,874 query: [select * from SALESFORCE_KT_PROD.ALL_OPPORTUNITIES where PERIOD_NAME='SEP-2018' ...]
+2018-09-24 14:23:47,076 query execution done
+2018-09-24 14:23:47,076 The table ALL_OPPORTUNITIES already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 14:23:47,076 query: [select * from SALESFORCE_KT_PROD.OPPORTUNITY_SNAPSHOT where PERIOD_NAME='SEP-201...]
+2018-09-24 14:23:47,295 query execution done
+2018-09-24 14:23:47,295 The table OPPORTUNITY_SNAPSHOT already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 14:23:47,295 query: [select * from SALESFORCE_KT_PROD.OPPORTUNITY_SNAPSHOT_DAILY where PERIOD_NAME='S...]
+2018-09-24 14:23:47,654 query execution done
+2018-09-24 14:23:47,654 The table OPPORTUNITY_SNAPSHOT_DAILY already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 14:23:47,654 query: [select * from SALESFORCE_KT_PROD.OPPTY_SNAPSHOT_ASIS where PERIOD_NAME='SEP-2018...]
+2018-09-24 14:23:47,872 query execution done
+2018-09-24 14:23:47,888 The table OPPTY_SNAPSHOT_ASIS already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 14:23:47,888 query: [select * from SALESFORCE_KT_PROD.OPPORTUNITYSPLIT_SNAPSHOT where PERIOD_NAME='SE...]
+2018-09-24 14:23:48,012 query execution done
+2018-09-24 14:23:48,012 The table OPPORTUNITYSPLIT_SNAPSHOT already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 14:23:48,012 query: [UPDATE  RUN_TABLE SET END_TIME=CURRENT_TIMESTAMP , TIME_TAKEN_IN_MINT= datediff(...]
+2018-09-24 14:23:48,730 query execution done
+2018-09-24 14:23:48,730 Daily load tables data Processing completed. Closing the snowflake connection
+2018-09-24 14:23:48,730 Total time taken for the load in minute: 0.06
+2018-09-24 14:23:48,761 closed
+2018-09-24 14:23:48,964 closed
+2018-09-24 14:25:01,277 Funnel data loading process started
+2018-09-24 14:25:01,277 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 14:25:01,277 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 14:25:02,105 query: [SELECT NVL(MAX(BATCH_NUM),0) FROM RUN_TABLE;]
+2018-09-24 14:25:02,916 query execution done
+2018-09-24 14:25:02,916 The batch number for this load is 52
+2018-09-24 14:25:02,916 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 14:25:03,103 query execution done
+2018-09-24 14:25:03,103 query: [select nvl(PROCESSED_FLAG,'N') from BASE_TABLES_RFRESH_CAPTURE;]
+2018-09-24 14:25:03,212 query execution done
+2018-09-24 14:25:03,212 Daily load tables data processing started
+2018-09-24 14:25:03,212 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 14:25:03,228 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 14:25:03,509 query: [INSERT INTO RUN_TABLE(BATCH_NUM,PROCESS_DESC,START_TIME,END_TIME,TIME_TAKEN_IN_M...]
+2018-09-24 14:25:06,600 query execution done
+2018-09-24 14:25:06,600 query: [select nvl(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP =CURRENT_DATE;]
+2018-09-24 14:25:06,803 query execution done
+2018-09-24 14:25:06,803 The workday for today is: ('WD15',)
+2018-09-24 14:25:06,803 Today is a workday. Program will try to load below tables
+2018-09-24 14:25:06,803 ['ALL_OPPORTUNITIES', 'OPPORTUNITY_SNAPSHOT', 'OPPORTUNITY_SNAPSHOT_DAILY', 'OPPTY_SNAPSHOT_ASIS', 'OPPORTUNITYSPLIT_SNAPSHOT']
+2018-09-24 14:25:06,803 query: [select * from SALESFORCE_KT_PROD.ALL_OPPORTUNITIES where PERIOD_NAME='SEP-2018' ...]
+2018-09-24 14:25:07,053 query execution done
+2018-09-24 14:25:07,053 The table ALL_OPPORTUNITIES already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 14:25:07,053 query: [select * from SALESFORCE_KT_PROD.OPPORTUNITY_SNAPSHOT where PERIOD_NAME='SEP-201...]
+2018-09-24 14:25:07,772 query execution done
+2018-09-24 14:25:07,772 The table OPPORTUNITY_SNAPSHOT already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 14:25:07,772 query: [select * from SALESFORCE_KT_PROD.OPPORTUNITY_SNAPSHOT_DAILY where PERIOD_NAME='S...]
+2018-09-24 14:25:08,119 query execution done
+2018-09-24 14:25:08,119 The table OPPORTUNITY_SNAPSHOT_DAILY already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 14:25:08,119 query: [select * from SALESFORCE_KT_PROD.OPPTY_SNAPSHOT_ASIS where PERIOD_NAME='SEP-2018...]
+2018-09-24 14:25:08,555 query execution done
+2018-09-24 14:25:08,571 The table OPPTY_SNAPSHOT_ASIS already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 14:25:08,571 query: [select * from SALESFORCE_KT_PROD.OPPORTUNITYSPLIT_SNAPSHOT where PERIOD_NAME='SE...]
+2018-09-24 14:25:08,743 query execution done
+2018-09-24 14:25:08,743 The table OPPORTUNITYSPLIT_SNAPSHOT already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 14:25:08,743 query: [UPDATE  RUN_TABLE SET END_TIME=CURRENT_TIMESTAMP , TIME_TAKEN_IN_MINT= datediff(...]
+2018-09-24 14:25:09,523 query execution done
+2018-09-24 14:25:09,523 Daily load tables data Processing completed. Closing the snowflake connection
+2018-09-24 14:25:09,523 Total time taken for the load in minute: 0.11
+2018-09-24 14:25:09,569 closed
+2018-09-24 14:25:09,772 closed
+2018-09-24 14:25:17,816 could not find io module state (interpreter shutdown?)
+Traceback (most recent call last):
+  File "C:\Users\386041\venvsales\lib\site-packages\snowflake\connector\network.py", line 752, in _request_exec
+    auth=SnowflakeAuth(token),
+  File "C:\Users\386041\venvsales\lib\site-packages\botocore\vendored\requests\sessions.py", line 451, in request
+    prep = self.prepare_request(req)
+  File "C:\Users\386041\venvsales\lib\site-packages\botocore\vendored\requests\sessions.py", line 382, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "C:\Users\386041\venvsales\lib\site-packages\botocore\vendored\requests\models.py", line 307, in prepare
+    self.prepare_body(data, files, json)
+  File "C:\Users\386041\venvsales\lib\site-packages\botocore\vendored\requests\models.py", line 436, in prepare_body
+    length = super_len(data)
+  File "C:\Users\386041\venvsales\lib\site-packages\botocore\vendored\requests\utils.py", line 59, in super_len
+    fileno = o.fileno()
+RuntimeError: could not find io module state (interpreter shutdown?)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\386041\venvsales\lib\site-packages\snowflake\connector\network.py", line 619, in _request_exec_wrapper
+    **kwargs)
+  File "C:\Users\386041\venvsales\lib\site-packages\snowflake\connector\network.py", line 842, in _request_exec
+    raise RetryRequest(err)
+snowflake.connector.network.RetryRequest: could not find io module state (interpreter shutdown?)
+2018-09-24 14:27:20,639 Funnel data loading process started
+2018-09-24 14:27:20,639 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 14:27:20,639 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 14:27:22,074 query: [SELECT NVL(MAX(BATCH_NUM),0) FROM RUN_TABLE;]
+2018-09-24 14:27:22,449 query execution done
+2018-09-24 14:27:22,449 The batch number for this load is 53
+2018-09-24 14:27:22,464 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 14:27:22,636 query execution done
+2018-09-24 14:27:22,636 query: [select nvl(PROCESSED_FLAG,'N') from BASE_TABLES_RFRESH_CAPTURE;]
+2018-09-24 14:27:23,307 query execution done
+2018-09-24 14:27:23,307 Daily load tables data processing started
+2018-09-24 14:27:23,307 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 14:27:23,307 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 14:27:23,915 query: [INSERT INTO RUN_TABLE(BATCH_NUM,PROCESS_DESC,START_TIME,END_TIME,TIME_TAKEN_IN_M...]
+2018-09-24 14:27:24,617 query execution done
+2018-09-24 14:27:24,617 query: [select nvl(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP =CURRENT_DATE;]
+2018-09-24 14:27:24,804 query execution done
+2018-09-24 14:27:24,804 The workday for today is: ('WD15',)
+2018-09-24 14:27:24,804 Today is a workday. Program will try to load below tables
+2018-09-24 14:27:24,804 ['ALL_OPPORTUNITIES', 'OPPORTUNITY_SNAPSHOT', 'OPPORTUNITY_SNAPSHOT_DAILY', 'OPPTY_SNAPSHOT_ASIS', 'OPPORTUNITYSPLIT_SNAPSHOT']
+2018-09-24 14:27:24,804 query: [select * from SALESFORCE_KT_PROD.ALL_OPPORTUNITIES where PERIOD_NAME='SEP-2018' ...]
+2018-09-24 14:27:25,460 query execution done
+2018-09-24 14:27:25,475 The table ALL_OPPORTUNITIES already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 14:27:25,475 query: [select * from SALESFORCE_KT_PROD.OPPORTUNITY_SNAPSHOT where PERIOD_NAME='SEP-201...]
+2018-09-24 14:27:26,146 query execution done
+2018-09-24 14:27:26,146 The table OPPORTUNITY_SNAPSHOT already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 14:27:26,146 query: [select * from SALESFORCE_KT_PROD.OPPORTUNITY_SNAPSHOT_DAILY where PERIOD_NAME='S...]
+2018-09-24 14:27:26,334 query execution done
+2018-09-24 14:27:26,334 The table OPPORTUNITY_SNAPSHOT_DAILY already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 14:27:26,334 query: [select * from SALESFORCE_KT_PROD.OPPTY_SNAPSHOT_ASIS where PERIOD_NAME='SEP-2018...]
+2018-09-24 14:27:26,538 query execution done
+2018-09-24 14:27:26,538 The table OPPTY_SNAPSHOT_ASIS already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 14:27:26,538 query: [select * from SALESFORCE_KT_PROD.OPPORTUNITYSPLIT_SNAPSHOT where PERIOD_NAME='SE...]
+2018-09-24 14:27:26,774 query execution done
+2018-09-24 14:27:26,774 The table OPPORTUNITYSPLIT_SNAPSHOT already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 14:27:26,774 query: [UPDATE  RUN_TABLE SET END_TIME=CURRENT_TIMESTAMP , TIME_TAKEN_IN_MINT= datediff(...]
+2018-09-24 14:27:27,668 query execution done
+2018-09-24 14:27:27,668 Daily load tables data Processing completed. Closing the snowflake connection
+2018-09-24 14:27:27,668 Total time taken for the load in minute: 0.07
+2018-09-24 14:27:27,668 Funnel load tables data processing started
+2018-09-24 14:27:27,668 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 14:27:27,684 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 14:27:28,323 query: [INSERT INTO RUN_TABLE(BATCH_NUM,PROCESS_DESC,START_TIME,END_TIME,TIME_TAKEN_IN_M...]
+2018-09-24 14:27:29,057 query execution done
+2018-09-24 14:27:29,057 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 14:27:29,213 query execution done
+2018-09-24 14:27:29,228 Today the workday is WD15
+2018-09-24 14:27:29,228 query: [SELECT COMPARISON_NAME  FROM FUNNEL_IN_OUT WHERE COMPARISON_NAME='2018-SEP-WD15-...]
+2018-09-24 14:27:46,459 query execution done
+2018-09-24 14:27:46,459 fetching data done
+2018-09-24 14:27:46,459 query: [select to_char(snapshot_dt,'mm/dd/yyyy') from opportunity_snapshot where period_...]
+2018-09-24 14:27:46,818 query execution done
+2018-09-24 14:27:46,818 query: [select to_char(snapshot_dt,'mm/dd/yyyy') from opportunity_snapshot where period_...]
+2018-09-24 14:27:46,974 query execution done
+2018-09-24 14:27:46,989 query: [INSERT INTO FUNNEL_IN_OUT(CATEGORY, SUB_CATEGORY, OPPTY_ID, OPPTY_NUMBER, CLOSE_...]
+2018-09-24 14:28:15,030 query execution done
+2018-09-24 14:28:15,030  Funnel load success for WD15and WD15for period SEP-2018
+2018-09-24 14:28:15,077 closed
+2018-09-24 14:28:15,217 closed
+2018-09-24 14:28:15,359 closed
+2018-09-24 14:31:04,200 Funnel data loading process started
+2018-09-24 14:31:04,200 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 14:31:04,200 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 14:31:05,496 query: [SELECT NVL(MAX(BATCH_NUM),0) FROM RUN_TABLE;]
+2018-09-24 14:31:05,761 query execution done
+2018-09-24 14:31:05,761 The batch number for this load is 54
+2018-09-24 14:31:05,761 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 14:31:05,948 query execution done
+2018-09-24 14:31:05,948 query: [select nvl(PROCESSED_FLAG,'N') from BASE_TABLES_RFRESH_CAPTURE;]
+2018-09-24 14:31:06,042 query execution done
+2018-09-24 14:31:06,042 Daily load tables data processing started
+2018-09-24 14:31:06,042 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 14:31:06,058 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 14:31:06,666 query: [INSERT INTO RUN_TABLE(BATCH_NUM,PROCESS_DESC,START_TIME,END_TIME,TIME_TAKEN_IN_M...]
+2018-09-24 14:31:07,337 query execution done
+2018-09-24 14:31:07,337 query: [select nvl(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP =CURRENT_DATE;]
+2018-09-24 14:31:07,493 query execution done
+2018-09-24 14:31:07,493 The workday for today is: ('WD15',)
+2018-09-24 14:31:07,493 Today is a workday. Program will try to load below tables
+2018-09-24 14:31:07,493 ['ALL_OPPORTUNITIES', 'OPPORTUNITY_SNAPSHOT', 'OPPORTUNITY_SNAPSHOT_DAILY', 'OPPTY_SNAPSHOT_ASIS', 'OPPORTUNITYSPLIT_SNAPSHOT']
+2018-09-24 14:31:07,493 query: [select * from SALESFORCE_KT_PROD.ALL_OPPORTUNITIES where PERIOD_NAME='SEP-2018' ...]
+2018-09-24 14:31:07,650 query execution done
+2018-09-24 14:31:07,650 The table ALL_OPPORTUNITIES already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 14:31:07,650 query: [select * from SALESFORCE_KT_PROD.OPPORTUNITY_SNAPSHOT where PERIOD_NAME='SEP-201...]
+2018-09-24 14:31:08,118 query execution done
+2018-09-24 14:31:08,118 The table OPPORTUNITY_SNAPSHOT already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 14:31:08,118 query: [select * from SALESFORCE_KT_PROD.OPPORTUNITY_SNAPSHOT_DAILY where PERIOD_NAME='S...]
+2018-09-24 14:31:08,336 query execution done
+2018-09-24 14:31:08,352 The table OPPORTUNITY_SNAPSHOT_DAILY already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 14:31:08,352 query: [select * from SALESFORCE_KT_PROD.OPPTY_SNAPSHOT_ASIS where PERIOD_NAME='SEP-2018...]
+2018-09-24 14:31:08,586 query execution done
+2018-09-24 14:31:08,602 The table OPPTY_SNAPSHOT_ASIS already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 14:31:08,602 query: [select * from SALESFORCE_KT_PROD.OPPORTUNITYSPLIT_SNAPSHOT where PERIOD_NAME='SE...]
+2018-09-24 14:31:08,773 query execution done
+2018-09-24 14:31:08,773 The table OPPORTUNITYSPLIT_SNAPSHOT already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 14:31:08,773 query: [UPDATE  RUN_TABLE SET END_TIME=CURRENT_TIMESTAMP , TIME_TAKEN_IN_MINT= datediff(...]
+2018-09-24 14:31:09,585 query execution done
+2018-09-24 14:31:09,585 Daily load tables data Processing completed. Closing the snowflake connection
+2018-09-24 14:31:09,585 Total time taken for the load in minute: 0.06
+2018-09-24 14:31:09,585 Funnel load tables data processing started
+2018-09-24 14:31:09,585 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 14:31:09,601 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 14:31:10,225 query: [INSERT INTO RUN_TABLE(BATCH_NUM,PROCESS_DESC,START_TIME,END_TIME,TIME_TAKEN_IN_M...]
+2018-09-24 14:31:11,663 query execution done
+2018-09-24 14:31:11,663 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 14:31:11,819 query execution done
+2018-09-24 14:31:11,819 Today the workday is WD15
+2018-09-24 14:31:11,819 query: [SELECT COMPARISON_NAME  FROM FUNNEL_IN_OUT WHERE COMPARISON_NAME='2018-SEP-WD15-...]
+2018-09-24 14:31:12,204 query execution done
+2018-09-24 14:31:12,204 fetching data done
+2018-09-24 14:31:12,204 query: [select to_char(snapshot_dt,'mm/dd/yyyy') from opportunity_snapshot where period_...]
+2018-09-24 14:31:12,454 query execution done
+2018-09-24 14:31:12,454 query: [select to_char(snapshot_dt,'mm/dd/yyyy') from opportunity_snapshot where period_...]
+2018-09-24 14:31:12,860 query execution done
+2018-09-24 14:31:12,860 query: [INSERT INTO FUNNEL_IN_OUT(CATEGORY, SUB_CATEGORY, OPPTY_ID, OPPTY_NUMBER, CLOSE_...]
+2018-09-24 14:31:46,338 query execution done
+2018-09-24 14:31:46,338  Funnel load success for WD15and WD02for period SEP-2018
+2018-09-24 14:31:46,369 closed
+2018-09-24 14:31:46,556 closed
+2018-09-24 14:31:46,759 closed
+2018-09-24 14:33:02,203 Funnel data loading process started
+2018-09-24 14:33:02,203 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 14:33:02,203 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 14:33:03,141 query: [SELECT NVL(MAX(BATCH_NUM),0) FROM RUN_TABLE;]
+2018-09-24 14:33:03,531 query execution done
+2018-09-24 14:33:03,531 The batch number for this load is 55
+2018-09-24 14:33:03,531 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 14:33:03,718 query execution done
+2018-09-24 14:33:03,718 query: [select nvl(PROCESSED_FLAG,'N') from BASE_TABLES_RFRESH_CAPTURE;]
+2018-09-24 14:33:03,842 query execution done
+2018-09-24 14:33:03,842 Daily load tables data processing started
+2018-09-24 14:33:03,842 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 14:33:03,842 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 14:33:04,420 query: [INSERT INTO RUN_TABLE(BATCH_NUM,PROCESS_DESC,START_TIME,END_TIME,TIME_TAKEN_IN_M...]
+2018-09-24 14:33:05,199 query execution done
+2018-09-24 14:33:05,199 query: [select nvl(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP =CURRENT_DATE;]
+2018-09-24 14:33:05,355 query execution done
+2018-09-24 14:33:05,371 The workday for today is: ('WD15',)
+2018-09-24 14:33:05,371 Today is a workday. Program will try to load below tables
+2018-09-24 14:33:05,371 ['ALL_OPPORTUNITIES', 'OPPORTUNITY_SNAPSHOT', 'OPPORTUNITY_SNAPSHOT_DAILY', 'OPPTY_SNAPSHOT_ASIS', 'OPPORTUNITYSPLIT_SNAPSHOT']
+2018-09-24 14:33:05,371 query: [select * from SALESFORCE_KT_PROD.ALL_OPPORTUNITIES where PERIOD_NAME='SEP-2018' ...]
+2018-09-24 14:33:05,511 query execution done
+2018-09-24 14:33:05,511 The table ALL_OPPORTUNITIES already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 14:33:05,511 query: [select * from SALESFORCE_KT_PROD.OPPORTUNITY_SNAPSHOT where PERIOD_NAME='SEP-201...]
+2018-09-24 14:33:05,808 query execution done
+2018-09-24 14:33:05,808 The table OPPORTUNITY_SNAPSHOT already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 14:33:05,808 query: [select * from SALESFORCE_KT_PROD.OPPORTUNITY_SNAPSHOT_DAILY where PERIOD_NAME='S...]
+2018-09-24 14:33:05,995 query execution done
+2018-09-24 14:33:05,995 The table OPPORTUNITY_SNAPSHOT_DAILY already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 14:33:05,995 query: [select * from SALESFORCE_KT_PROD.OPPTY_SNAPSHOT_ASIS where PERIOD_NAME='SEP-2018...]
+2018-09-24 14:33:06,213 query execution done
+2018-09-24 14:33:06,213 The table OPPTY_SNAPSHOT_ASIS already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 14:33:06,213 query: [select * from SALESFORCE_KT_PROD.OPPORTUNITYSPLIT_SNAPSHOT where PERIOD_NAME='SE...]
+2018-09-24 14:33:06,354 query execution done
+2018-09-24 14:33:06,354 The table OPPORTUNITYSPLIT_SNAPSHOT already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 14:33:06,354 query: [UPDATE  RUN_TABLE SET END_TIME=CURRENT_TIMESTAMP , TIME_TAKEN_IN_MINT= datediff(...]
+2018-09-24 14:33:07,962 query execution done
+2018-09-24 14:33:07,962 Daily load tables data Processing completed. Closing the snowflake connection
+2018-09-24 14:33:07,962 Total time taken for the load in minute: 0.07
+2018-09-24 14:33:07,962 Funnel load tables data processing started
+2018-09-24 14:33:07,962 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 14:33:07,978 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 14:33:08,274 query: [INSERT INTO RUN_TABLE(BATCH_NUM,PROCESS_DESC,START_TIME,END_TIME,TIME_TAKEN_IN_M...]
+2018-09-24 14:33:08,882 query execution done
+2018-09-24 14:33:08,882 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 14:33:09,069 query execution done
+2018-09-24 14:33:09,069 Today the workday is WD15
+2018-09-24 14:33:09,069 query: [SELECT COMPARISON_NAME  FROM FUNNEL_IN_OUT WHERE COMPARISON_NAME='2018-SEP-WD15-...]
+2018-09-24 14:33:09,569 query execution done
+2018-09-24 14:33:09,569 query: [insert into FUNNEL_LOG_TABLE values('1','The snapshot already exists. FUNNEL_IN_...]
+2018-09-24 14:33:10,333 query execution done
+2018-09-24 14:33:10,333  Funnel load success for WD15and WD02for period SEP-2018
+2018-09-24 14:33:10,364 closed
+2018-09-24 14:33:10,520 closed
+2018-09-24 14:33:10,894 closed
+2018-09-24 14:35:04,081 Funnel data loading process started
+2018-09-24 14:35:04,081 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 14:35:04,081 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 14:35:05,284 query: [SELECT NVL(MAX(BATCH_NUM),0) FROM RUN_TABLE;]
+2018-09-24 14:35:05,990 query execution done
+2018-09-24 14:35:05,990 The batch number for this load is 56
+2018-09-24 14:35:05,990 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 14:35:06,536 query execution done
+2018-09-24 14:35:06,536 query: [select nvl(PROCESSED_FLAG,'N') from BASE_TABLES_RFRESH_CAPTURE;]
+2018-09-24 14:35:06,692 query execution done
+2018-09-24 14:35:06,692 Daily load tables data processing started
+2018-09-24 14:35:06,692 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 14:35:06,692 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 14:35:07,285 query: [INSERT INTO RUN_TABLE(BATCH_NUM,PROCESS_DESC,START_TIME,END_TIME,TIME_TAKEN_IN_M...]
+2018-09-24 14:35:08,315 query execution done
+2018-09-24 14:35:08,315 query: [select nvl(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP =CURRENT_DATE;]
+2018-09-24 14:35:08,471 query execution done
+2018-09-24 14:35:08,471 The workday for today is: ('WD15',)
+2018-09-24 14:35:08,471 Today is a workday. Program will try to load below tables
+2018-09-24 14:35:08,471 ['ALL_OPPORTUNITIES', 'OPPORTUNITY_SNAPSHOT', 'OPPORTUNITY_SNAPSHOT_DAILY', 'OPPTY_SNAPSHOT_ASIS', 'OPPORTUNITYSPLIT_SNAPSHOT']
+2018-09-24 14:35:08,471 query: [select * from SALESFORCE_KT_PROD.ALL_OPPORTUNITIES where PERIOD_NAME='SEP-2018' ...]
+2018-09-24 14:35:08,658 query execution done
+2018-09-24 14:35:08,658 The table ALL_OPPORTUNITIES already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 14:35:08,658 query: [select * from SALESFORCE_KT_PROD.OPPORTUNITY_SNAPSHOT where PERIOD_NAME='SEP-201...]
+2018-09-24 14:35:09,298 query execution done
+2018-09-24 14:35:09,314 The table OPPORTUNITY_SNAPSHOT already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 14:35:09,314 query: [select * from SALESFORCE_KT_PROD.OPPORTUNITY_SNAPSHOT_DAILY where PERIOD_NAME='S...]
+2018-09-24 14:35:09,485 query execution done
+2018-09-24 14:35:09,485 The table OPPORTUNITY_SNAPSHOT_DAILY already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 14:35:09,485 query: [select * from SALESFORCE_KT_PROD.OPPTY_SNAPSHOT_ASIS where PERIOD_NAME='SEP-2018...]
+2018-09-24 14:35:09,688 query execution done
+2018-09-24 14:35:09,688 The table OPPTY_SNAPSHOT_ASIS already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 14:35:09,688 query: [select * from SALESFORCE_KT_PROD.OPPORTUNITYSPLIT_SNAPSHOT where PERIOD_NAME='SE...]
+2018-09-24 14:35:09,938 query execution done
+2018-09-24 14:35:09,938 The table OPPORTUNITYSPLIT_SNAPSHOT already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 14:35:09,938 query: [UPDATE  RUN_TABLE SET END_TIME=CURRENT_TIMESTAMP , TIME_TAKEN_IN_MINT= datediff(...]
+2018-09-24 14:35:10,994 query execution done
+2018-09-24 14:35:10,994 Daily load tables data Processing completed. Closing the snowflake connection
+2018-09-24 14:35:10,994 Total time taken for the load in minute: 0.07
+2018-09-24 14:35:10,994 Funnel load tables data processing started
+2018-09-24 14:35:10,994 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 14:35:11,009 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 14:35:11,618 query: [INSERT INTO RUN_TABLE(BATCH_NUM,PROCESS_DESC,START_TIME,END_TIME,TIME_TAKEN_IN_M...]
+2018-09-24 14:35:12,446 query execution done
+2018-09-24 14:35:12,446 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 14:35:12,711 query execution done
+2018-09-24 14:35:12,711 Today the workday is WD15
+2018-09-24 14:35:12,711 query: [SELECT COMPARISON_NAME  FROM FUNNEL_IN_OUT WHERE COMPARISON_NAME='2018-SEP-WD15-...]
+2018-09-24 14:35:13,039 query execution done
+2018-09-24 14:35:13,054 query: [insert into FUNNEL_LOG_TABLE values('1','The snapshot already exists. FUNNEL_IN_...]
+2018-09-24 14:35:14,445 query execution done
+2018-09-24 14:35:14,445  Funnel load success for WD15and WD02for period SEP-2018
+2018-09-24 14:35:14,445 Funnel load tables data processing started
+2018-09-24 14:35:14,445 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 14:35:14,445 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 14:35:14,757 query: [INSERT INTO RUN_TABLE(BATCH_NUM,PROCESS_DESC,START_TIME,END_TIME,TIME_TAKEN_IN_M...]
+2018-09-24 14:35:15,615 query execution done
+2018-09-24 14:35:15,615 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 14:35:15,802 query execution done
+2018-09-24 14:35:15,802 Today the workday is WD15
+2018-09-24 14:35:15,802 query: [SELECT COMPARISON_NAME  FROM FUNNEL_IN_OUT WHERE COMPARISON_NAME='2018-SEP-WD15-...]
+2018-09-24 14:35:15,958 query execution done
+2018-09-24 14:35:15,958 fetching data done
+2018-09-24 14:35:15,958 query: [select to_char(snapshot_dt,'mm/dd/yyyy') from opportunity_snapshot where period_...]
+2018-09-24 14:35:16,114 query execution done
+2018-09-24 14:35:16,114 query: [select to_char(snapshot_dt,'mm/dd/yyyy') from opportunity_snapshot where period_...]
+2018-09-24 14:35:16,286 query execution done
+2018-09-24 14:35:16,286 fetching data done
+2018-09-24 14:35:16,286 query: [insert into FUNNEL_LOG_TABLE values('1','insert into FUNEEL_IN_OUT failed. Pleas...]
+2018-09-24 14:35:16,894 query execution done
+2018-09-24 14:35:16,910  Funnel load failed for WD15and WD05for period SEP-2018
+2018-09-24 14:35:16,910 Funnel load tables data processing started
+2018-09-24 14:35:16,910 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 14:35:16,910 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 14:35:17,511 query: [INSERT INTO RUN_TABLE(BATCH_NUM,PROCESS_DESC,START_TIME,END_TIME,TIME_TAKEN_IN_M...]
+2018-09-24 14:35:18,713 query execution done
+2018-09-24 14:35:18,713 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 14:35:19,072 query execution done
+2018-09-24 14:35:19,072 Today the workday is WD15
+2018-09-24 14:35:19,072 query: [SELECT COMPARISON_NAME  FROM FUNNEL_IN_OUT WHERE COMPARISON_NAME='2018-SEP-WD15-...]
+2018-09-24 14:35:19,290 query execution done
+2018-09-24 14:35:19,290 fetching data done
+2018-09-24 14:35:19,290 query: [select to_char(snapshot_dt,'mm/dd/yyyy') from opportunity_snapshot where period_...]
+2018-09-24 14:35:19,415 query execution done
+2018-09-24 14:35:19,415 query: [select to_char(snapshot_dt,'mm/dd/yyyy') from opportunity_snapshot where period_...]
+2018-09-24 14:35:19,634 query execution done
+2018-09-24 14:35:19,634 fetching data done
+2018-09-24 14:35:19,634 query: [insert into FUNNEL_LOG_TABLE values('1','insert into FUNEEL_IN_OUT failed. Pleas...]
+2018-09-24 14:35:20,492 query execution done
+2018-09-24 14:35:20,492  Funnel load failed for WD15and WD10for period SEP-2018
+2018-09-24 14:35:20,523 closed
+2018-09-24 14:35:20,663 closed
+2018-09-24 14:35:20,819 closed
+2018-09-24 14:35:20,975 closed
+2018-09-24 14:35:21,100 closed
+2018-09-24 16:07:46,283 Funnel load tables data processing started
+2018-09-24 16:07:46,299 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 16:07:46,299 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 16:07:48,001 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 16:07:48,581 query execution done
+2018-09-24 16:07:48,581 Today the workday is WD15
+2018-09-24 16:07:48,581 query: [SELECT COMPARISON_NAME  FROM FUNNEL_IN_OUT WHERE COMPARISON_NAME='2018-SEP-WD08-...]
+2018-09-24 16:07:48,940 query execution done
+2018-09-24 16:07:48,940 fetching data done
+2018-09-24 16:07:48,940 query: [INSERT INTO RUN_TABLE(BATCH_NUM,PROCESS_DESC,START_TIME,END_TIME,TIME_TAKEN_IN_M...]
+2018-09-24 16:07:49,752 query execution done
+2018-09-24 16:07:49,752 query: [select to_char(snapshot_dt,'mm/dd/yyyy') from opportunity_snapshot where period_...]
+2018-09-24 16:07:49,988 query execution done
+2018-09-24 16:07:49,988 query: [select to_char(snapshot_dt,'mm/dd/yyyy') from opportunity_snapshot where period_...]
+2018-09-24 16:07:50,191 query execution done
+2018-09-24 16:07:50,191 query: [INSERT INTO FUNNEL_IN_OUT(CATEGORY, SUB_CATEGORY, OPPTY_ID, OPPTY_NUMBER, CLOSE_...]
+2018-09-24 16:07:55,211 query execution done
+2018-09-24 16:07:55,211 query: [insert into RUN_TABLE_DETAILS(BATCH,TASK_PHASE,TASK_DESC,STATUS,TABLE_NAME,PROCE...]
+2018-09-24 16:07:56,250 query execution done
+2018-09-24 16:07:56,250 Loading completed for table FUNNEL_IN_OUT for snapshot  2018-SEP-WD08-WD01. It took 8.920162644953304 min and loaded # of rows 36720
+2018-09-24 16:07:56,296 closed
+2018-09-24 17:01:15,023 Funnel load tables data processing started
+2018-09-24 17:01:15,024 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 17:01:15,032 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 17:01:15,987 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 17:01:16,378 query execution done
+2018-09-24 17:01:16,378 Today the workday is WD15
+2018-09-24 17:01:16,378 query: [SELECT COMPARISON_NAME  FROM FUNNEL_IN_OUT WHERE COMPARISON_NAME='2018-SEP-WD08-...]
+2018-09-24 17:01:16,677 query execution done
+2018-09-24 17:01:16,677 fetching data done
+2018-09-24 17:01:16,677 query: [INSERT INTO RUN_TABLE(BATCH_NUM,PROCESS_DESC,START_TIME,END_TIME,TIME_TAKEN_IN_M...]
+2018-09-24 17:01:17,496 query execution done
+2018-09-24 17:01:17,497 query: [select to_char(snapshot_dt,'mm/dd/yyyy') from opportunity_snapshot where period_...]
+2018-09-24 17:01:18,083 query execution done
+2018-09-24 17:01:18,084 query: [select to_char(snapshot_dt,'mm/dd/yyyy') from opportunity_snapshot where period_...]
+2018-09-24 17:01:18,550 query execution done
+2018-09-24 17:01:18,552 query: [INSERT INTO FUNNEL_IN_OUT(CATEGORY, SUB_CATEGORY, OPPTY_ID, OPPTY_NUMBER, CLOSE_...]
+2018-09-24 17:01:25,092 query execution done
+2018-09-24 17:01:25,093 query: [insert into RUN_TABLE_DETAILS(BATCH,TASK_PHASE,TASK_DESC,STATUS,TABLE_NAME,PROCE...]
+2018-09-24 17:01:26,340 query execution done
+2018-09-24 17:01:26,341 Loading completed for table FUNNEL_IN_OUT for snapshot  2018-SEP-WD08-WD01. It took 10.01814760063723 min and loaded # of rows 36720
+2018-09-24 17:01:26,377 closed
+2018-09-24 17:11:37,028 Funnel load tables data processing started
+2018-09-24 17:11:37,028 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 17:11:37,028 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 17:11:37,900 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 17:11:38,259 query execution done
+2018-09-24 17:11:38,259 Today the workday is WD15
+2018-09-24 17:11:38,259 query: [SELECT COMPARISON_NAME  FROM FUNNEL_IN_OUT WHERE COMPARISON_NAME='2018-SEP-WD08-...]
+2018-09-24 17:11:38,790 query execution done
+2018-09-24 17:11:38,790 The Funnel Comparison Already Exists. So not processing again.
+2018-09-24 17:11:38,790 Funnel data loading process started
+2018-09-24 17:11:38,790 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 17:11:38,790 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 17:11:39,524 query: [SELECT NVL(MAX(BATCH_NUM),0) FROM RUN_TABLE;]
+2018-09-24 17:11:39,698 query execution done
+2018-09-24 17:11:39,698 The batch number for this load is 1
+2018-09-24 17:11:39,698 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 17:11:40,025 query execution done
+2018-09-24 17:11:40,025 query: [select nvl(PROCESSED_FLAG,'N') from BASE_TABLES_RFRESH_CAPTURE;]
+2018-09-24 17:11:40,150 query execution done
+2018-09-24 17:11:40,150 Daily load tables data processing started
+2018-09-24 17:11:40,150 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 17:11:40,150 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 17:11:40,446 query: [INSERT INTO RUN_TABLE(BATCH_NUM,PROCESS,START_TIME,END_TIME,TIME_TAKEN_IN_MINT,S...]
+2018-09-24 17:11:41,549 query execution done
+2018-09-24 17:11:41,549 query: [select nvl(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP =CURRENT_DATE;]
+2018-09-24 17:11:41,736 query execution done
+2018-09-24 17:11:41,736 The workday for today is: ('WD15',)
+2018-09-24 17:11:41,736 Today is a workday. Program will try to load below tables
+2018-09-24 17:11:41,752 ['ALL_OPPORTUNITIES', 'OPPORTUNITY_SNAPSHOT', 'OPPORTUNITY_SNAPSHOT_DAILY', 'OPPTY_SNAPSHOT_ASIS', 'OPPORTUNITYSPLIT_SNAPSHOT']
+2018-09-24 17:11:41,752 query: [select * from SALESFORCE_KT_PROD.ALL_OPPORTUNITIES where PERIOD_NAME='SEP-2018' ...]
+2018-09-24 17:11:42,157 query execution done
+2018-09-24 17:11:42,157 The table ALL_OPPORTUNITIES already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 17:11:42,157 query: [select * from SALESFORCE_KT_PROD.OPPORTUNITY_SNAPSHOT where PERIOD_NAME='SEP-201...]
+2018-09-24 17:11:42,438 query execution done
+2018-09-24 17:11:42,438 The table OPPORTUNITY_SNAPSHOT already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 17:11:42,438 query: [select * from SALESFORCE_KT_PROD.OPPORTUNITY_SNAPSHOT_DAILY where PERIOD_NAME='S...]
+2018-09-24 17:11:42,875 query execution done
+2018-09-24 17:11:42,875 The table OPPORTUNITY_SNAPSHOT_DAILY already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 17:11:42,875 query: [select * from SALESFORCE_KT_PROD.OPPTY_SNAPSHOT_ASIS where PERIOD_NAME='SEP-2018...]
+2018-09-24 17:11:43,299 query execution done
+2018-09-24 17:11:43,299 The table OPPTY_SNAPSHOT_ASIS already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 17:11:43,299 query: [select * from SALESFORCE_KT_PROD.OPPORTUNITYSPLIT_SNAPSHOT where PERIOD_NAME='SE...]
+2018-09-24 17:11:43,712 query execution done
+2018-09-24 17:11:43,712 The table OPPORTUNITYSPLIT_SNAPSHOT already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 17:11:43,712 query: [UPDATE  RUN_TABLE SET END_TIME=CURRENT_TIMESTAMP , TIME_TAKEN_IN_MINT= datediff(...]
+2018-09-24 17:11:44,610 query execution done
+2018-09-24 17:11:44,610 Daily load tables data Processing completed. Closing the snowflake connection
+2018-09-24 17:11:44,610 Total time taken for the load in minute: 0.07
+2018-09-24 17:11:44,610 Sales analytics load failed
+2018-09-24 17:11:44,610 'funnelinout' object is not callable
+2018-09-24 17:11:44,610 Closing Connection. Exit form Sales Analytcs Load
+2018-09-24 17:11:44,657 closed
+2018-09-24 17:11:44,875 closed
+2018-09-24 17:11:45,109 closed
+2018-09-24 19:36:07,093 Funnel load tables data processing started
+2018-09-24 19:36:07,093 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 19:36:07,109 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 19:36:08,636 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 19:36:09,872 query execution done
+2018-09-24 19:36:09,872 Today the workday is WD15
+2018-09-24 19:36:09,872 query: [SELECT COMPARISON_NAME  FROM FUNNEL_IN_OUT WHERE COMPARISON_NAME='2018-SEP-WD08-...]
+2018-09-24 19:36:11,602 query execution done
+2018-09-24 19:36:11,602 The Funnel Comparison Already Exists. So not processing again.
+2018-09-24 19:36:11,649 closed
+2018-09-24 19:43:57,199 Funnel load tables data processing started
+2018-09-24 19:43:57,199 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 19:43:57,199 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 19:43:58,509 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 19:43:58,977 query execution done
+2018-09-24 19:43:58,977 Today the workday is WD15
+2018-09-24 19:43:58,977 query: [SELECT COMPARISON_NAME  FROM FUNNEL_IN_OUT WHERE COMPARISON_NAME='2018-SEP-WD08-...]
+2018-09-24 19:43:59,320 query execution done
+2018-09-24 19:43:59,320 fetching data done
+2018-09-24 19:43:59,320 query: [insert into FUNNEL_LOG_TABLE values('1','insert into FUNEEL_IN_OUT failed. Pleas...]
+2018-09-24 19:44:01,009 query execution done
+2018-09-24 19:44:01,056 closed
+2018-09-24 19:45:15,736 Funnel load tables data processing started
+2018-09-24 19:45:15,736 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 19:45:15,736 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 19:45:16,919 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 19:45:17,153 query execution done
+2018-09-24 19:45:17,153 Today the workday is WD15
+2018-09-24 19:45:17,153 query: [SELECT COMPARISON_NAME  FROM FUNNEL_IN_OUT WHERE COMPARISON_NAME='2018-SEP-WD08-...]
+2018-09-24 19:45:17,574 query execution done
+2018-09-24 19:45:17,574 fetching data done
+2018-09-24 19:45:17,574 query: [select to_char(snapshot_dt,'mm/dd/yyyy') from opportunity_snapshot where period_...]
+2018-09-24 19:45:18,281 query execution done
+2018-09-24 19:45:18,281 query: [select to_char(snapshot_dt,'mm/dd/yyyy') from opportunity_snapshot where period_...]
+2018-09-24 19:45:18,686 query execution done
+2018-09-24 19:45:18,686 started inserting the funnel data
+2018-09-24 19:45:18,686 query: [INSERT INTO FUNNEL_IN_OUT(CATEGORY, SUB_CATEGORY, OPPTY_ID, OPPTY_NUMBER, CLOSE_...]
+2018-09-24 19:45:23,335 query execution done
+2018-09-24 19:45:23,335 query: [insert into RUN_TABLE_DETAILS(BATCH,TASK_PHASE,TASK_DESC,STATUS,TABLE_NAME,PROCE...]
+2018-09-24 19:45:24,866 query execution done
+2018-09-24 19:45:24,866 Loading completed for table FUNNEL_IN_OUT for snapshot  2018-SEP-WD08-WD01. It took 7.601454484082742 min and loaded # of rows 36720
+2018-09-24 19:45:24,913 closed
+2018-09-24 19:46:55,714 Funnel load tables data processing started
+2018-09-24 19:46:55,714 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 19:46:55,730 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 19:46:57,242 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 19:46:57,912 query execution done
+2018-09-24 19:46:57,912 Today the workday is WD15
+2018-09-24 19:46:57,912 query: [SELECT COMPARISON_NAME  FROM FUNNEL_IN_OUT WHERE COMPARISON_NAME='2018-SEP-WD08-...]
+2018-09-24 19:46:59,061 query execution done
+2018-09-24 19:46:59,061 fetching data done
+2018-09-24 19:46:59,061 query: [insert into FUNNEL_LOG_TABLE values('1','insert into FUNEEL_IN_OUT failed. Pleas...]
+2018-09-24 19:47:00,467 query execution done
+2018-09-24 19:47:00,514 closed
+2018-09-24 19:49:08,632 Funnel load tables data processing started
+2018-09-24 19:49:08,632 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 19:49:08,632 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 19:49:10,012 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 19:49:10,467 query execution done
+2018-09-24 19:49:10,467 Today the workday is WD15
+2018-09-24 19:49:10,467 query: [SELECT COMPARISON_NAME  FROM FUNNEL_IN_OUT WHERE COMPARISON_NAME='2018-SEP-WD08-...]
+2018-09-24 19:49:10,893 query execution done
+2018-09-24 19:49:10,893 fetching data done
+2018-09-24 19:49:10,893 query: [select to_char(snapshot_dt,'mm/dd/yyyy') from opportunity_snapshot where period_...]
+2018-09-24 19:49:11,070 query execution done
+2018-09-24 19:49:11,070 query: [select to_char(snapshot_dt,'mm/dd/yyyy') from opportunity_snapshot where period_...]
+2018-09-24 19:49:11,725 query execution done
+2018-09-24 19:49:11,725 started inserting the funnel data
+2018-09-24 19:49:11,725 query: [INSERT INTO FUNNEL_IN_OUT(CATEGORY, SUB_CATEGORY, OPPTY_ID, OPPTY_NUMBER, CLOSE_...]
+2018-09-24 19:49:15,393 query execution done
+2018-09-24 19:49:15,393 query: [insert into RUN_TABLE_DETAILS(BATCH,TASK_PHASE,TASK_DESC,STATUS,TABLE_NAME,PROCE...]
+2018-09-24 19:49:16,656 query execution done
+2018-09-24 19:49:16,656 Loading completed for table FUNNEL_IN_OUT for snapshot  2018-SEP-WD08-WD01. It took 6.74484341222939 min and loaded # of rows 36720
+2018-09-24 19:49:16,703 closed
+2018-09-24 19:50:04,881 Funnel load tables data processing started
+2018-09-24 19:50:04,881 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 19:50:04,881 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 19:50:06,245 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 19:50:06,604 query execution done
+2018-09-24 19:50:06,604 Today the workday is WD15
+2018-09-24 19:50:06,604 query: [SELECT COMPARISON_NAME  FROM FUNNEL_IN_OUT WHERE COMPARISON_NAME='2018-SEP-WD08-...]
+2018-09-24 19:50:07,290 query execution done
+2018-09-24 19:50:07,290 fetching data done
+2018-09-24 19:50:07,290 query: [insert into FUNNEL_LOG_TABLE values('1','insert into FUNEEL_IN_OUT failed. Pleas...]
+2018-09-24 19:50:07,973 query execution done
+2018-09-24 19:50:08,020 closed
+2018-09-24 19:52:11,571 Funnel load tables data processing started
+2018-09-24 19:52:11,571 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 19:52:11,586 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 19:52:12,898 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 19:52:13,964 query execution done
+2018-09-24 19:52:13,964 Today the workday is WD15
+2018-09-24 19:52:13,979 query: [SELECT COMPARISON_NAME  FROM FUNNEL_IN_OUT WHERE COMPARISON_NAME='2018-SEP-WD08-...]
+2018-09-24 19:52:14,294 query execution done
+2018-09-24 19:52:14,294 fetching data done
+2018-09-24 19:52:14,341 closed
+2018-09-24 19:54:49,265 Funnel load tables data processing started
+2018-09-24 19:54:49,265 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 19:54:49,281 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 19:54:50,749 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 19:54:51,015 query execution done
+2018-09-24 19:54:51,015 Today the workday is WD15
+2018-09-24 19:54:51,015 query: [SELECT COMPARISON_NAME  FROM FUNNEL_IN_OUT WHERE COMPARISON_NAME='2018-SEP-WD08-...]
+2018-09-24 19:54:51,311 query execution done
+2018-09-24 19:54:51,311 fetching data done
+2018-09-24 19:54:51,358 closed
+2018-09-24 19:55:41,586 Funnel load tables data processing started
+2018-09-24 19:55:41,586 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 19:55:41,586 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 19:55:43,174 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 19:55:43,485 query execution done
+2018-09-24 19:55:43,485 Today the workday is WD15
+2018-09-24 19:55:43,485 query: [SELECT COMPARISON_NAME  FROM FUNNEL_IN_OUT WHERE COMPARISON_NAME='2018-SEP-WD08-...]
+2018-09-24 19:55:44,088 query execution done
+2018-09-24 19:55:44,088 fetching data done
+2018-09-24 19:55:44,088 query: [select to_char(snapshot_dt,'mm/dd/yyyy') from opportunity_snapshot where period_...]
+2018-09-24 19:55:44,337 query execution done
+2018-09-24 19:55:44,337 query: [select to_char(snapshot_dt,'mm/dd/yyyy') from opportunity_snapshot where period_...]
+2018-09-24 19:55:44,556 query execution done
+2018-09-24 19:55:44,556 started inserting the funnel data
+2018-09-24 19:55:44,556 query: [INSERT INTO FUNNEL_IN_OUT(CATEGORY, SUB_CATEGORY, OPPTY_ID, OPPTY_NUMBER, CLOSE_...]
+2018-09-24 19:55:48,982 query execution done
+2018-09-24 19:55:48,982 query: [insert into RUN_TABLE_DETAILS(BATCH,TASK_PHASE,TASK_DESC,STATUS,TABLE_NAME,PROCE...]
+2018-09-24 19:55:50,362 query execution done
+2018-09-24 19:55:50,362 Loading completed for table FUNNEL_IN_OUT for snapshot  2018-SEP-WD08-WD01. It took 7.4009026285550075 min and loaded # of rows 36720
+2018-09-24 19:55:50,393 closed
+2018-09-24 20:05:05,033 Funnel load tables data processing started
+2018-09-24 20:05:05,033 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 20:05:05,033 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 20:05:06,380 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 20:05:06,570 query execution done
+2018-09-24 20:05:06,570 Today the workday is WD15
+2018-09-24 20:05:06,570 query: [SELECT COMPARISON_NAME  FROM FUNNEL_IN_OUT WHERE COMPARISON_NAME='2018-SEP-WD08-...]
+2018-09-24 20:05:06,882 query execution done
+2018-09-24 20:05:06,882 fetching data done
+2018-09-24 20:05:06,928 closed
+2018-09-24 20:06:15,521 Funnel load tables data processing started
+2018-09-24 20:06:15,521 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 20:06:15,521 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 20:06:16,762 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 20:06:17,267 query execution done
+2018-09-24 20:06:17,267 Today the workday is WD15
+2018-09-24 20:06:17,267 query: [SELECT COMPARISON_NAME  FROM FUNNEL_IN_OUT WHERE COMPARISON_NAME='2018-SEP-WD08-...]
+2018-09-24 20:06:17,627 query execution done
+2018-09-24 20:06:17,627 fetching data done
+2018-09-24 20:06:17,642 query: [select to_char(snapshot_dt,'mm/dd/yyyy') from opportunity_snapshot where period_...]
+2018-09-24 20:06:17,795 query execution done
+2018-09-24 20:06:17,811 query: [select to_char(snapshot_dt,'mm/dd/yyyy') from opportunity_snapshot where period_...]
+2018-09-24 20:06:17,936 query execution done
+2018-09-24 20:06:17,936 started inserting the funnel data
+2018-09-24 20:06:17,936 query: [INSERT INTO FUNNEL_IN_OUT(CATEGORY, SUB_CATEGORY, OPPTY_ID, OPPTY_NUMBER, CLOSE_...]
+2018-09-24 20:06:21,143 query execution done
+2018-09-24 20:06:21,143 query: [insert into RUN_TABLE_DETAILS(BATCH,TASK_PHASE,TASK_DESC,STATUS,TABLE_NAME,PROCE...]
+2018-09-24 20:06:22,142 query execution done
+2018-09-24 20:06:22,142 Loading completed for table FUNNEL_IN_OUT for snapshot  2018-SEP-WD08-WD01. It took 5.630566972826494 min and loaded # of rows 36720
+2018-09-24 20:06:22,189 closed
+2018-09-24 20:07:23,771 Funnel load tables data processing started
+2018-09-24 20:07:23,771 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 20:07:23,771 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 20:07:24,748 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 20:07:25,450 query execution done
+2018-09-24 20:07:25,450 Today the workday is WD15
+2018-09-24 20:07:25,450 query: [SELECT COMPARISON_NAME  FROM FUNNEL_IN_OUT WHERE COMPARISON_NAME='2018-SEP-WD08-...]
+2018-09-24 20:07:26,131 query execution done
+2018-09-24 20:07:26,131 fetching data done
+2018-09-24 20:07:26,182 closed
+2018-09-24 20:07:59,128 Funnel load tables data processing started
+2018-09-24 20:07:59,128 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 20:07:59,128 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 20:08:00,402 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 20:08:00,573 query execution done
+2018-09-24 20:08:00,573 Today the workday is WD15
+2018-09-24 20:08:00,573 query: [SELECT COMPARISON_NAME  FROM FUNNEL_IN_OUT WHERE COMPARISON_NAME='2018-SEP-WD08-...]
+2018-09-24 20:08:00,890 query execution done
+2018-09-24 20:08:00,890 fetching data done
+2018-09-24 20:08:00,937 closed
+2018-09-24 20:08:43,243 Funnel load tables data processing started
+2018-09-24 20:08:43,243 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 20:08:43,243 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 20:08:44,644 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 20:08:45,408 query execution done
+2018-09-24 20:08:45,408 Today the workday is WD15
+2018-09-24 20:08:45,408 query: [SELECT COMPARISON_NAME  FROM FUNNEL_IN_OUT WHERE COMPARISON_NAME='2018-SEP-WD08-...]
+2018-09-24 20:08:45,663 query execution done
+2018-09-24 20:08:45,663 fetching data done
+2018-09-24 20:08:45,710 closed
+2018-09-24 20:10:00,478 Funnel load tables data processing started
+2018-09-24 20:10:00,478 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 20:10:00,478 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 20:10:01,648 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 20:10:01,855 query execution done
+2018-09-24 20:10:01,855 Today the workday is WD15
+2018-09-24 20:10:01,855 query: [SELECT COMPARISON_NAME  FROM FUNNEL_IN_OUT WHERE COMPARISON_NAME='2018-SEP-WD08-...]
+2018-09-24 20:10:02,512 query execution done
+2018-09-24 20:10:02,512 fetching data done
+2018-09-24 20:10:02,512 query: [select to_char(snapshot_dt,'mm/dd/yyyy') from opportunity_snapshot where period_...]
+2018-09-24 20:10:02,762 query execution done
+2018-09-24 20:10:02,762 query: [select to_char(snapshot_dt,'mm/dd/yyyy') from opportunity_snapshot where period_...]
+2018-09-24 20:10:02,964 query execution done
+2018-09-24 20:10:02,964 started inserting the funnel data
+2018-09-24 20:10:02,964 query: [INSERT INTO FUNNEL_IN_OUT(CATEGORY, SUB_CATEGORY, OPPTY_ID, OPPTY_NUMBER, CLOSE_...]
+2018-09-24 20:10:06,202 query execution done
+2018-09-24 20:10:06,202 query: [insert into RUN_TABLE_DETAILS(BATCH,TASK_PHASE,TASK_DESC,STATUS,TABLE_NAME,PROCE...]
+2018-09-24 20:10:07,268 query execution done
+2018-09-24 20:10:07,268 Loading completed for table FUNNEL_IN_OUT for snapshot  2018-SEP-WD08-WD01. It took 5.7214342161830745 min and loaded # of rows 36720
+2018-09-24 20:10:07,325 closed
+2018-09-24 20:11:52,194 Funnel load tables data processing started
+2018-09-24 20:11:52,194 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 20:11:52,194 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 20:11:53,188 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 20:11:53,539 query execution done
+2018-09-24 20:11:53,539 Today the workday is WD15
+2018-09-24 20:11:53,539 query: [SELECT COMPARISON_NAME  FROM FUNNEL_IN_OUT WHERE COMPARISON_NAME='2018-SEP-WD08-...]
+2018-09-24 20:11:53,944 query execution done
+2018-09-24 20:11:53,944 fetching data done
+2018-09-24 20:11:53,944 query: [INSERT INTO RUN_TABLE(BATCH_NUM,PROCESS,PROCESS_DESC,START_TIME,END_TIME,TIME_TA...]
+2018-09-24 20:11:54,307 query execution done
+2018-09-24 20:11:54,354 closed
+2018-09-24 20:13:40,060 Funnel load tables data processing started
+2018-09-24 20:13:40,060 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 20:13:40,076 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 20:13:41,487 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 20:13:41,965 query execution done
+2018-09-24 20:13:41,965 Today the workday is WD15
+2018-09-24 20:13:41,965 query: [SELECT COMPARISON_NAME  FROM FUNNEL_IN_OUT WHERE COMPARISON_NAME='2018-SEP-WD08-...]
+2018-09-24 20:13:42,433 query execution done
+2018-09-24 20:13:42,433 fetching data done
+2018-09-24 20:13:42,480 closed
+2018-09-24 20:15:37,296 Funnel load tables data processing started
+2018-09-24 20:15:37,296 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 20:15:37,296 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 20:15:38,494 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 20:15:39,061 query execution done
+2018-09-24 20:15:39,063 Today the workday is WD15
+2018-09-24 20:15:39,063 query: [SELECT COMPARISON_NAME  FROM FUNNEL_IN_OUT WHERE COMPARISON_NAME='2018-SEP-WD08-...]
+2018-09-24 20:15:39,349 query execution done
+2018-09-24 20:15:39,349 fetching data done
+2018-09-24 20:15:39,349 query: [select to_char(snapshot_dt,'mm/dd/yyyy') from opportunity_snapshot where period_...]
+2018-09-24 20:15:39,567 query execution done
+2018-09-24 20:15:39,567 query: [select to_char(snapshot_dt,'mm/dd/yyyy') from opportunity_snapshot where period_...]
+2018-09-24 20:15:40,360 query execution done
+2018-09-24 20:15:40,360 started inserting the funnel data
+2018-09-24 20:15:40,360 query: [INSERT INTO FUNNEL_IN_OUT(CATEGORY, SUB_CATEGORY, OPPTY_ID, OPPTY_NUMBER, CLOSE_...]
+2018-09-24 20:15:44,548 query execution done
+2018-09-24 20:15:44,548 query: [insert into RUN_TABLE_DETAILS(BATCH,TASK_PHASE,TASK_DESC,STATUS,TABLE_NAME,PROCE...]
+2018-09-24 20:15:45,827 query execution done
+2018-09-24 20:15:45,827 Loading completed for table FUNNEL_IN_OUT for snapshot  2018-SEP-WD08-WD01. It took 7.249809085660004 min and loaded # of rows 36720
+2018-09-24 20:15:45,874 closed
+2018-09-24 20:17:03,752 Funnel load tables data processing started
+2018-09-24 20:17:03,752 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 20:17:03,752 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 20:17:05,211 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 20:17:05,539 query execution done
+2018-09-24 20:17:05,539 Today the workday is WD15
+2018-09-24 20:17:05,539 query: [SELECT COMPARISON_NAME  FROM FUNNEL_IN_OUT WHERE COMPARISON_NAME='2018-SEP-WD08-...]
+2018-09-24 20:17:05,898 query execution done
+2018-09-24 20:17:05,898 fetching data done
+2018-09-24 20:17:05,898 query: [select to_char(snapshot_dt,'mm/dd/yyyy') from opportunity_snapshot where period_...]
+2018-09-24 20:17:06,555 query execution done
+2018-09-24 20:17:06,555 query: [select to_char(snapshot_dt,'mm/dd/yyyy') from opportunity_snapshot where period_...]
+2018-09-24 20:17:06,711 query execution done
+2018-09-24 20:17:06,711 started inserting the funnel data
+2018-09-24 20:17:06,711 query: [INSERT INTO FUNNEL_IN_OUT(CATEGORY, SUB_CATEGORY, OPPTY_ID, OPPTY_NUMBER, CLOSE_...]
+2018-09-24 20:17:10,166 query execution done
+2018-09-24 20:17:10,166 query: [insert into RUN_TABLE_DETAILS(BATCH,TASK_PHASE,TASK_DESC,STATUS,TABLE_NAME,PROCE...]
+2018-09-24 20:17:10,949 query execution done
+2018-09-24 20:17:10,949 Loading completed for table FUNNEL_IN_OUT for snapshot  2018-SEP-WD08-WD01. It took 6.41663571871409 min and loaded # of rows 36720
+2018-09-24 20:17:10,980 closed
+2018-09-24 20:22:52,971 Funnel load tables data processing started
+2018-09-24 20:22:52,971 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 20:22:52,973 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 20:22:53,936 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 20:22:54,153 query execution done
+2018-09-24 20:22:54,153 Today the workday is WD15
+2018-09-24 20:22:54,156 query: [SELECT COMPARISON_NAME  FROM FUNNEL_IN_OUT WHERE COMPARISON_NAME='2018-SEP-WD08-...]
+2018-09-24 20:22:54,451 query execution done
+2018-09-24 20:22:54,453 fetching data done
+2018-09-24 20:22:54,453 query: [select to_char(snapshot_dt,'mm/dd/yyyy') from opportunity_snapshot where period_...]
+2018-09-24 20:22:54,671 query execution done
+2018-09-24 20:22:54,671 query: [select to_char(snapshot_dt,'mm/dd/yyyy') from opportunity_snapshot where period_...]
+2018-09-24 20:22:54,886 query execution done
+2018-09-24 20:22:54,888 started inserting the funnel data
+2018-09-24 20:22:54,888 query: [INSERT INTO FUNNEL_IN_OUT(CATEGORY, SUB_CATEGORY, OPPTY_ID, OPPTY_NUMBER, CLOSE_...]
+2018-09-24 20:22:58,796 query execution done
+2018-09-24 20:22:58,796 query: [insert into RUN_TABLE_DETAILS(BATCH,TASK_PHASE,TASK_DESC,STATUS,TABLE_NAME,PROCE...]
+2018-09-24 20:22:59,461 query execution done
+2018-09-24 20:22:59,461 Loading completed for table FUNNEL_IN_OUT for snapshot  2018-SEP-WD08-WD01. It took 5.827015072824935 min and loaded # of rows 36720
+2018-09-24 20:22:59,461 query: [UPDATE RUN_TABLE SET STATUS='COMPLETED' WHERE BATCH_NUM=40 AND PROCESS_DESC=2018...]
+2018-09-24 20:22:59,988 query execution done
+2018-09-24 20:23:00,031 closed
+2018-09-24 20:26:43,380 Funnel load tables data processing started
+2018-09-24 20:26:43,380 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 20:26:43,380 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 20:26:45,080 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 20:26:45,517 query execution done
+2018-09-24 20:26:45,517 Today the workday is WD15
+2018-09-24 20:26:45,517 query: [SELECT COMPARISON_NAME  FROM FUNNEL_IN_OUT WHERE COMPARISON_NAME='2018-SEP-WD08-...]
+2018-09-24 20:26:45,970 query execution done
+2018-09-24 20:26:45,970 fetching data done
+2018-09-24 20:26:45,970 query: [select to_char(snapshot_dt,'mm/dd/yyyy') from opportunity_snapshot where period_...]
+2018-09-24 20:26:46,188 query execution done
+2018-09-24 20:26:46,188 query: [select to_char(snapshot_dt,'mm/dd/yyyy') from opportunity_snapshot where period_...]
+2018-09-24 20:26:46,549 query execution done
+2018-09-24 20:26:46,565 started inserting the funnel data
+2018-09-24 20:26:46,565 query: [INSERT INTO FUNNEL_IN_OUT(CATEGORY, SUB_CATEGORY, OPPTY_ID, OPPTY_NUMBER, CLOSE_...]
+2018-09-24 20:26:49,820 query execution done
+2018-09-24 20:26:49,820 query: [insert into RUN_TABLE_DETAILS(BATCH,TASK_PHASE,TASK_DESC,STATUS,TABLE_NAME,PROCE...]
+2018-09-24 20:26:51,458 query execution done
+2018-09-24 20:26:51,458 Loading completed for table FUNNEL_IN_OUT for snapshot  2018-SEP-WD08-WD01. It took 6.451538547211244 min and loaded # of rows 36720
+2018-09-24 20:26:51,458 query: [UPDATE RUN_TABLE SET STATUS_CD='COMPLETED' WHERE BATCH_NUM=40 AND PROCESS_DESC=2...]
+2018-09-24 20:26:51,773 query execution done
+2018-09-24 20:26:51,789 closed
+2018-09-24 20:27:56,133 Funnel load tables data processing started
+2018-09-24 20:27:56,133 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 20:27:56,138 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 20:27:57,239 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 20:27:57,546 query execution done
+2018-09-24 20:27:57,546 Today the workday is WD15
+2018-09-24 20:27:57,546 query: [SELECT COMPARISON_NAME  FROM FUNNEL_IN_OUT WHERE COMPARISON_NAME='2018-SEP-WD08-...]
+2018-09-24 20:27:58,264 query execution done
+2018-09-24 20:27:58,264 fetching data done
+2018-09-24 20:27:58,264 query: [select to_char(snapshot_dt,'mm/dd/yyyy') from opportunity_snapshot where period_...]
+2018-09-24 20:27:58,646 query execution done
+2018-09-24 20:27:58,646 query: [select to_char(snapshot_dt,'mm/dd/yyyy') from opportunity_snapshot where period_...]
+2018-09-24 20:27:59,059 query execution done
+2018-09-24 20:27:59,059 started inserting the funnel data
+2018-09-24 20:27:59,061 query: [INSERT INTO FUNNEL_IN_OUT(CATEGORY, SUB_CATEGORY, OPPTY_ID, OPPTY_NUMBER, CLOSE_...]
+2018-09-24 20:28:02,799 query execution done
+2018-09-24 20:28:02,802 query: [insert into RUN_TABLE_DETAILS(BATCH,TASK_PHASE,TASK_DESC,STATUS,TABLE_NAME,PROCE...]
+2018-09-24 20:28:03,957 query execution done
+2018-09-24 20:28:03,959 Loading completed for table FUNNEL_IN_OUT for snapshot  2018-SEP-WD08-WD01. It took 6.668141271670061 min and loaded # of rows 36720
+2018-09-24 20:28:04,002 closed
+2018-09-24 20:29:37,431 Funnel load tables data processing started
+2018-09-24 20:29:37,431 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 20:29:37,447 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 20:29:39,372 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 20:29:39,611 query execution done
+2018-09-24 20:29:39,611 Today the workday is WD15
+2018-09-24 20:29:39,611 query: [SELECT COMPARISON_NAME  FROM FUNNEL_IN_OUT WHERE COMPARISON_NAME='2018-SEP-WD08-...]
+2018-09-24 20:29:40,094 query execution done
+2018-09-24 20:29:40,094 fetching data done
+2018-09-24 20:29:40,094 query: [select to_char(snapshot_dt,'mm/dd/yyyy') from opportunity_snapshot where period_...]
+2018-09-24 20:29:40,534 query execution done
+2018-09-24 20:29:40,534 query: [select to_char(snapshot_dt,'mm/dd/yyyy') from opportunity_snapshot where period_...]
+2018-09-24 20:29:40,721 query execution done
+2018-09-24 20:29:40,721 started inserting the funnel data
+2018-09-24 20:29:40,721 query: [INSERT INTO FUNNEL_IN_OUT(CATEGORY, SUB_CATEGORY, OPPTY_ID, OPPTY_NUMBER, CLOSE_...]
+2018-09-24 20:29:44,667 query execution done
+2018-09-24 20:29:44,667 query: [insert into RUN_TABLE_DETAILS(BATCH,TASK_PHASE,TASK_DESC,STATUS,TABLE_NAME,PROCE...]
+2018-09-24 20:29:46,027 query execution done
+2018-09-24 20:29:46,027 Loading completed for table FUNNEL_IN_OUT for snapshot  2018-SEP-WD08-WD01. It took 7.232180726413383 min and loaded # of rows 36720
+2018-09-24 20:29:46,027 query: [UPDATE RUN_TABLE SET STATUS_CD='COMPLETED' WHERE BATCH_NUM=40 AND PROCESS_DESC='...]
+2018-09-24 20:29:47,270 query execution done
+2018-09-24 20:29:47,316 closed
+2018-09-24 20:34:14,111 Funnel load tables data processing started
+2018-09-24 20:34:14,111 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 20:34:14,127 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 20:34:15,364 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 20:34:15,676 query execution done
+2018-09-24 20:34:15,676 Today the workday is WD15
+2018-09-24 20:34:15,676 query: [SELECT COMPARISON_NAME  FROM FUNNEL_IN_OUT WHERE COMPARISON_NAME='2018-SEP-WD08-...]
+2018-09-24 20:34:16,117 query execution done
+2018-09-24 20:34:16,117 fetching data done
+2018-09-24 20:34:16,117 query: [INSERT INTO RUN_TABLE(BATCH_NUM,PROCESS,PROCESS_DESC,START_TIME,END_TIME,TIME_TA...]
+2018-09-24 20:34:16,845 query execution done
+2018-09-24 20:34:16,845 query: [select to_char(snapshot_dt,'mm/dd/yyyy') from opportunity_snapshot where period_...]
+2018-09-24 20:34:17,521 query execution done
+2018-09-24 20:34:17,521 query: [select to_char(snapshot_dt,'mm/dd/yyyy') from opportunity_snapshot where period_...]
+2018-09-24 20:34:18,186 query execution done
+2018-09-24 20:34:18,186 started inserting the funnel data
+2018-09-24 20:34:18,202 query: [INSERT INTO FUNNEL_IN_OUT(CATEGORY, SUB_CATEGORY, OPPTY_ID, OPPTY_NUMBER, CLOSE_...]
+2018-09-24 20:34:21,640 query execution done
+2018-09-24 20:34:21,640 query: [insert into RUN_TABLE_DETAILS(BATCH,TASK_PHASE,TASK_DESC,STATUS,TABLE_NAME,PROCE...]
+2018-09-24 20:34:23,820 query execution done
+2018-09-24 20:34:23,820 Loading completed for table FUNNEL_IN_OUT for snapshot  2018-SEP-WD08-WD01. It took 7.520729173041564 min and loaded # of rows 36720
+2018-09-24 20:34:23,820 query: [UPDATE RUN_TABLE SET STATUS_CD='COMPLETED' WHERE BATCH_NUM=40 AND PROCESS_DESC='...]
+2018-09-24 20:34:25,512 query execution done
+2018-09-24 20:34:25,543 closed
+2018-09-24 20:37:10,461 Funnel load tables data processing started
+2018-09-24 20:37:10,477 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 20:37:10,477 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 20:37:11,675 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 20:37:11,895 query execution done
+2018-09-24 20:37:11,895 Today the workday is WD15
+2018-09-24 20:37:11,895 query: [SELECT COMPARISON_NAME  FROM FUNNEL_IN_OUT WHERE COMPARISON_NAME='2018-SEP-WD08-...]
+2018-09-24 20:37:12,706 query execution done
+2018-09-24 20:37:12,706 fetching data done
+2018-09-24 20:37:12,706 query: [INSERT INTO RUN_TABLE(BATCH_NUM,PROCESS,PROCESS_DESC,START_TIME,END_TIME,TIME_TA...]
+2018-09-24 20:37:13,613 query execution done
+2018-09-24 20:37:13,613 query: [select to_char(snapshot_dt,'mm/dd/yyyy') from opportunity_snapshot where period_...]
+2018-09-24 20:37:14,117 query execution done
+2018-09-24 20:37:14,133 query: [select to_char(snapshot_dt,'mm/dd/yyyy') from opportunity_snapshot where period_...]
+2018-09-24 20:37:14,273 query execution done
+2018-09-24 20:37:14,273 started inserting the funnel data
+2018-09-24 20:37:14,273 query: [INSERT INTO FUNNEL_IN_OUT(CATEGORY, SUB_CATEGORY, OPPTY_ID, OPPTY_NUMBER, CLOSE_...]
+2018-09-24 20:37:17,215 query execution done
+2018-09-24 20:37:17,215 query: [insert into RUN_TABLE_DETAILS(BATCH,TASK_PHASE,TASK_DESC,STATUS,TABLE_NAME,PROCE...]
+2018-09-24 20:37:18,668 query execution done
+2018-09-24 20:37:18,668 Loading completed for table FUNNEL_IN_OUT for snapshot  2018-SEP-WD08-WD01. It took 6.752944110088298 min and loaded # of rows 36720
+2018-09-24 20:37:18,668 query: [UPDATE RUN_TABLE SET STATUS_CD='COMPLETED',END_TIME=CURRENT_TIMESTAMP , TIME_TAK...]
+2018-09-24 20:37:20,581 query execution done
+2018-09-24 20:37:20,628 closed
+2018-09-24 20:49:30,585 Funnel data loading process started
+2018-09-24 20:49:30,585 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 20:49:30,601 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 20:49:31,952 query: [SELECT NVL(MAX(BATCH_NUM),0) FROM RUN_TABLE;]
+2018-09-24 20:49:32,236 query execution done
+2018-09-24 20:49:32,236 The batch number for this load is 1
+2018-09-24 20:49:32,236 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 20:49:32,644 query execution done
+2018-09-24 20:49:32,644 query: [select nvl(PROCESSED_FLAG,'N') from BASE_TABLES_RFRESH_CAPTURE;]
+2018-09-24 20:49:32,883 query execution done
+2018-09-24 20:49:32,898 Daily load tables data processing started
+2018-09-24 20:49:32,898 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 20:49:32,898 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 20:49:33,665 query: [INSERT INTO RUN_TABLE(BATCH_NUM,PROCESS,START_TIME,END_TIME,TIME_TAKEN_IN_MINT,S...]
+2018-09-24 20:49:34,640 query execution done
+2018-09-24 20:49:34,640 query: [select nvl(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP =CURRENT_DATE;]
+2018-09-24 20:49:35,251 query execution done
+2018-09-24 20:49:35,251 The workday for today is: ('WD15',)
+2018-09-24 20:49:35,251 Today is a workday. Program will try to load below tables
+2018-09-24 20:49:35,251 ['ALL_OPPORTUNITIES', 'OPPORTUNITY_SNAPSHOT', 'OPPORTUNITY_SNAPSHOT_DAILY', 'OPPTY_SNAPSHOT_ASIS', 'OPPORTUNITYSPLIT_SNAPSHOT']
+2018-09-24 20:49:35,251 query: [select * from SALESFORCE_KT_PROD.ALL_OPPORTUNITIES where PERIOD_NAME='SEP-2018' ...]
+2018-09-24 20:49:35,749 query execution done
+2018-09-24 20:49:35,749 Truncating the table ALL_OPPORTUNITIES as the tuncate option is set to yes for the table
+2018-09-24 20:49:35,749 query: [TRUNCATE TABLE  ALL_OPPORTUNITIES]
+2018-09-24 20:49:36,664 query execution done
+2018-09-24 20:49:36,664 Loading the table ALL_OPPORTUNITIES
+2018-09-24 20:49:36,664 query: [insert into ALL_OPPORTUNITIES (OPPTY_ID,OPPTY_NUMBER, OPPTY_NAME,Close_Date,CREA...]
+2018-09-24 20:49:54,245 query execution done
+2018-09-24 20:49:54,245 query: [insert into RUN_TABLE_DETAILS(BATCH,TASK_PHASE,STATUS,TABLE_NAME,PROCESS_COUNT,E...]
+2018-09-24 20:49:54,947 query execution done
+2018-09-24 20:49:54,947 Loading completed for table ALL_OPPORTUNITIES. Took 0.29 min and loaded # of rows 200733
+2018-09-24 20:49:54,947 query: [select * from SALESFORCE_KT_PROD.OPPORTUNITY_SNAPSHOT where PERIOD_NAME='SEP-201...]
+2018-09-24 20:49:55,150 query execution done
+2018-09-24 20:49:55,150 The table OPPORTUNITY_SNAPSHOT already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 20:49:55,150 query: [select * from SALESFORCE_KT_PROD.OPPORTUNITY_SNAPSHOT_DAILY where PERIOD_NAME='S...]
+2018-09-24 20:49:55,399 query execution done
+2018-09-24 20:49:55,415 The table OPPORTUNITY_SNAPSHOT_DAILY already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 20:49:55,415 query: [select * from SALESFORCE_KT_PROD.OPPTY_SNAPSHOT_ASIS where PERIOD_NAME='SEP-2018...]
+2018-09-24 20:49:55,999 query execution done
+2018-09-24 20:49:55,999 The table OPPTY_SNAPSHOT_ASIS already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 20:49:55,999 query: [select * from SALESFORCE_KT_PROD.OPPORTUNITYSPLIT_SNAPSHOT where PERIOD_NAME='SE...]
+2018-09-24 20:49:56,485 query execution done
+2018-09-24 20:49:56,485 The table OPPORTUNITYSPLIT_SNAPSHOT already loaded once today.So, not loading this time. To load the data for today again at first you have to delete todays data from the table.
+2018-09-24 20:49:56,485 query: [UPDATE  RUN_TABLE SET END_TIME=CURRENT_TIMESTAMP , TIME_TAKEN_IN_MINT= datediff(...]
+2018-09-24 20:49:57,413 query execution done
+2018-09-24 20:49:57,413 Daily load tables data Processing completed. Closing the snowflake connection
+2018-09-24 20:49:57,413 Total time taken for the load in minute: 0.41
+2018-09-24 20:49:57,413 Funnel load tables data processing started
+2018-09-24 20:49:57,428 Snowflake Connector for Python Version: 1.6.9, Python Version: 3.5.4, Platform: Windows-7-6.1.7601-SP1
+2018-09-24 20:49:57,428 Starting new HTTPS connection (1): keysight.snowflakecomputing.com
+2018-09-24 20:49:58,218 query: [select NVL(WORKDAY,'WE') FROM WD_CALENDER  WHERE SEP = CURRENT_DATE;]
+2018-09-24 20:49:58,426 query execution done
+2018-09-24 20:49:58,426 Today the workday is WD15
+2018-09-24 20:49:58,426 query: [SELECT COMPARISON_NAME  FROM FUNNEL_IN_OUT WHERE COMPARISON_NAME='2018-SEP-WD15-...]
+2018-09-24 20:49:58,948 query execution done
+2018-09-24 20:49:58,948 fetching data done
+2018-09-24 20:49:58,948 query: [INSERT INTO RUN_TABLE(BATCH_NUM,PROCESS,PROCESS_DESC,START_TIME,END_TIME,TIME_TA...]
+2018-09-24 20:49:59,860 query execution done
+2018-09-24 20:49:59,860 query: [select to_char(snapshot_dt,'mm/dd/yyyy') from opportunity_snapshot where period_...]
+2018-09-24 20:50:00,570 query execution done
+2018-09-24 20:50:00,570 query: [select to_char(snapshot_dt,'mm/dd/yyyy') from opportunity_snapshot where period_...]
+2018-09-24 20:50:00,788 query execution done
+2018-09-24 20:50:00,788 started inserting the funnel data
+2018-09-24 20:50:00,788 query: [INSERT INTO FUNNEL_IN_OUT(CATEGORY, SUB_CATEGORY, OPPTY_ID, OPPTY_NUMBER, CLOSE_...]
+2018-09-24 20:50:05,379 query execution done
+2018-09-24 20:50:05,379 query: [insert into RUN_TABLE_DETAILS(BATCH,TASK_PHASE,TASK_DESC,STATUS,TABLE_NAME,PROCE...]
+2018-09-24 20:50:06,296 query execution done
+2018-09-24 20:50:06,312 Loading completed for table FUNNEL_IN_OUT for snapshot  2018-SEP-WD15-WD02. It took 7.958543554507614 min and loaded # of rows 15431
+2018-09-24 20:50:06,312 query: [UPDATE RUN_TABLE SET STATUS_CD='COMPLETED',END_TIME=CURRENT_TIMESTAMP , TIME_TAK...]
+2018-09-24 20:50:07,204 query execution done
+2018-09-24 20:50:07,204  Funnel load success for WD15and WD02for period SEP-2018
+2018-09-24 20:50:07,204 Closing Connection. Exit form Sales Analytcs Load
+2018-09-24 20:50:07,250 closed
+2018-09-24 20:50:07,458 closed
+2018-09-24 20:50:07,770 closed
