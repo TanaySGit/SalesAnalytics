@@ -3,10 +3,10 @@
  This helps to make the calling python class simple and arranged like maintaining a load order
 Author: BI Reporting Team(bireporting....)
 
-Please contact Dave Williams(david.............),
-Bharath Natarajan(bharath...............),
+Please contact Dave W(david.............),
+Bharath N...(bharath...............),
 or
-Krishna Moleyar (krishna..................)
+Krishna M... (krishna..................)
 before changing any code
 '''
 
