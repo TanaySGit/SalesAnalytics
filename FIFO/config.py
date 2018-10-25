@@ -1,12 +1,12 @@
 
 '''This is a config file for Funnel Analytics data processing. This is a container for static parameters and executable strings.
  This helps to make the calling python class simple and arranged like maintaining a load order
-Author: BI Reporting Team(bireporting.pdl-it@keysight.com)
+Author: BI Reporting Team(bireporting....)
 
-Please contact Dave Williams(david_williams@keysight.com),
-Bharath Natarajan(bharath_natarajan@keysight.com),
+Please contact Dave Williams(david.............),
+Bharath Natarajan(bharath...............),
 or
-Krishna Moleyar (krishna-mohan.moleyar@keysight.com)
+Krishna Moleyar (krishna..................)
 before changing any code
 '''
 
