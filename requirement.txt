@@ -21,7 +21,7 @@ cycler==0.10.0
 decorator==4.3.0
 Django==1.10
 docutils==0.14
-ecdsa==0.13
+ecdsa==0.13.3
 entrypoints==0.2.3
 et-xmlfile==1.0.1
 
