@@ -5,7 +5,7 @@ azure-storage==0.36.0
 backcall==0.1.0
 beatbox==0.96
 beautifulsoup4==4.6.3
-bleach==2.1
+bleach==3.3.0
 boto3==1.7.33
 botocore==1.10.33
 bs4==0.0.1
