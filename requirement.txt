@@ -74,7 +74,7 @@ pyasn1-modules==0.2.1
 pycparser==2.18
 
 pygame==1.9.2
-Pygments==2.2.0
+Pygments==2.7.4
 PyJWT==1.6.4
 pyodbc==4.0.23
 pyOpenSSL==17.5.0
