@@ -75,7 +75,7 @@ pycparser==2.18
 
 pygame==1.9.2
 Pygments==2.2.0
-PyJWT==1.6.4
+PyJWT==2.4.0
 pyodbc==4.0.23
 pyOpenSSL==17.5.0
 pyparsing==2.2.0
